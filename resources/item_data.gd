@@ -5,7 +5,11 @@ extends Resource
 @export var sprite: Texture2D
 @export var illegal: bool
 @export var shape: Shape = Shape.SINGLE
-@export var origin: Vector2
+## The point of origin where an object is grabbed, in a 3x3 matrix.
+## Starts from the bottom left corner.
+@export var origin: Array = [1,1]
+
+# TODO: link shape and origin
 
 enum Shape {
 	SINGLE,	## 1x1
