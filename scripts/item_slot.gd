@@ -25,25 +25,30 @@ func update_ui() -> void:
 	if not item:
 		item_icon.texture = null
 		return
-	
+
 	item_icon.texture = item.sprite
 	tooltip_text = item.name
 
+func _get_anchor() -> Vector2:
+	var anchor_x: float = self.size.x * item.get_grab_data()[0]
+	var anchor_y: float = self.size.x * item.get_grab_data()[1]
+	var anchor: Vector2 = Vector2(anchor_x, anchor_y)
+	return anchor
+
 func _get_drag_data(_at_position: Vector2) -> Variant:
 	if not item:
-		print_debug("Item slot ", self, " is empty") 
+		#print_debug("Item slot ", self, " is empty")
 		return
-		
-	print_debug("Node ", self, " holds texture ", item_icon.texture)
+
+	#print_debug("Node ", self, " holds texture ", item_icon.texture)
 	var item_preview: Panel = self.duplicate()
 	var drag_preview: Control = Control.new()
 	drag_preview.add_child(item_preview)
-	item_preview.position -= Vector2(self.size.x, self.size.y)
-	#item_preview.position -= Vector2(self.size.x / 2, self.size.y / 2)
+	item_preview.position -= _get_anchor()
 	item_preview.self_modulate = Color.TRANSPARENT
 	#drag_preview.scale = Vector2(0.75, 0.75)
 	#drag_preview.modulate = Color(drag_preview.modulate, 0.75)
-	
+
 	set_drag_preview(drag_preview)
 	item_icon.hide()
 	is_empty = true
@@ -53,7 +58,7 @@ func _can_drop_data(_at_position: Vector2, _data: Variant) -> bool:
 	return is_empty
 
 func _drop_data(_at_position: Vector2, data: Variant) -> void:
-	print_debug("Item slot ", self, " received ", data)
+	#print_debug("Item slot ", self, " received ", data)
 	var tmp: ItemData = item
 	var safe_data: ItemSlot = data
 	item = safe_data.item
