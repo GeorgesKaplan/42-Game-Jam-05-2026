@@ -73,15 +73,15 @@ const SHAPE_DATA: Dictionary[Shape, Array] = {
 }
 
 const GRAB_DATA: Dictionary[GrabAnchor, Array] = {
-	GrabAnchor.TOP_LEFT: 	[0,		0],
-	GrabAnchor.TOP_MID: 	[0.5,	0],
-	GrabAnchor.TOP_RIGHT: 	[1,		0],
-	GrabAnchor.MID_LEFT: 	[0,		0.5],
+	GrabAnchor.TOP_LEFT: 	[0.25,	0.25],
+	GrabAnchor.TOP_MID: 	[0.5,	0.25],
+	GrabAnchor.TOP_RIGHT: 	[0.75,	0.25],
+	GrabAnchor.MID_LEFT: 	[0.25,	0.5],
 	GrabAnchor.MID_MID: 	[0.5,	0.5],
-	GrabAnchor.MID_RIGHT: 	[1,		0.5],
-	GrabAnchor.BOT_LEFT: 	[0,		1],
-	GrabAnchor.BOT_MID: 	[0.5,	1],
-	GrabAnchor.BOT_RIGHT: 	[1,		1],
+	GrabAnchor.MID_RIGHT: 	[0.75,	0.5],
+	GrabAnchor.BOT_LEFT: 	[0.25,	0.75],
+	GrabAnchor.BOT_MID: 	[0.5,	0.75],
+	GrabAnchor.BOT_RIGHT: 	[0.75,	0.75],
 }
 
 func get_shape_data() -> Array:

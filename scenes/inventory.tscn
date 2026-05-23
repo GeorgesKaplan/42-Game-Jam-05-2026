@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://d12ojcv564vkm" path="res://scripts/inventory.gd" id="1_53g1v"]
 [ext_resource type="PackedScene" uid="uid://bq6rp6yn01lh8" path="res://scenes/item_slot.tscn" id="2_hj2ta"]
 [ext_resource type="Resource" uid="uid://dqmkssb3t0r0h" path="res://resources/items/big_barrel.tres" id="3_53g1v"]
-[ext_resource type="Resource" uid="uid://dgpsbu7efffxh" path="res://resources/items/flag.tres" id="3_yyk2a"]
 [ext_resource type="Resource" uid="uid://kxh7nqacsek4" path="res://resources/items/tall_barrel.tres" id="6_g71ie"]
 
 [node name="Inventory" type="Panel" unique_id=1890885336]
@@ -14,8 +13,85 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_53g1v")
 
+[node name="BGGridContainer" type="GridContainer" parent="." unique_id=1290958335]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 5
+
+[node name="Panel" type="Panel" parent="BGGridContainer" unique_id=1589628360]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel2" type="Panel" parent="BGGridContainer" unique_id=57859477]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel3" type="Panel" parent="BGGridContainer" unique_id=25677691]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel4" type="Panel" parent="BGGridContainer" unique_id=1477374681]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel5" type="Panel" parent="BGGridContainer" unique_id=346050612]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel6" type="Panel" parent="BGGridContainer" unique_id=198651772]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel7" type="Panel" parent="BGGridContainer" unique_id=1856707490]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel8" type="Panel" parent="BGGridContainer" unique_id=1211402490]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel9" type="Panel" parent="BGGridContainer" unique_id=1761477432]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel10" type="Panel" parent="BGGridContainer" unique_id=201966915]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel11" type="Panel" parent="BGGridContainer" unique_id=700207747]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel12" type="Panel" parent="BGGridContainer" unique_id=659105088]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel13" type="Panel" parent="BGGridContainer" unique_id=916205160]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel14" type="Panel" parent="BGGridContainer" unique_id=973082907]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel15" type="Panel" parent="BGGridContainer" unique_id=487765322]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
 [node name="GridContainer" type="GridContainer" parent="." unique_id=1745711909]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 3
 theme_override_constants/h_separation = 5
 theme_override_constants/v_separation = 5
@@ -32,7 +108,6 @@ layout_mode = 2
 
 [node name="ItemSlot4" parent="GridContainer" unique_id=825028513 instance=ExtResource("2_hj2ta")]
 layout_mode = 2
-item = ExtResource("3_yyk2a")
 
 [node name="ItemSlot5" parent="GridContainer" unique_id=1493111540 instance=ExtResource("2_hj2ta")]
 layout_mode = 2
