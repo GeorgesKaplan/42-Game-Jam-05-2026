@@ -9,6 +9,8 @@ extends Panel
 ## Defines if the slot is available or not.
 ## Must be set to false when slot is filled and true when emptied.
 var is_empty: bool = true
+## tells inspector if this panel has already been checked
+var is_checked: bool = false
 
 func _ready() -> void:
 	#print_debug("Node ", self, " holds texture ", item_icon.texture)

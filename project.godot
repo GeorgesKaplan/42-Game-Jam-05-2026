@@ -11,12 +11,14 @@ config_version=5
 [application]
 
 config/name="Ahoi!"
+run/main_scene="uid://rxw7o4fkyqvc"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 FSM="*uid://dc3mmh4mxtrxh"
+Inspection="*uid://dranpe1cckyy0"
 
 [debug]
 
