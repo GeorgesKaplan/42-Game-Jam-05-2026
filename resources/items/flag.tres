@@ -7,6 +7,4 @@
 script = ExtResource("1_80vmc")
 name = "Flag"
 sprite = ExtResource("2_a8rv3")
-illegal = true
-shape = Array[Array]([[1]])
 metadata/_custom_type_script = "uid://bfa760mek7xh3"

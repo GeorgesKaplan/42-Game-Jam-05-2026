@@ -9,19 +9,18 @@ func floodfill(x: int, y: int) -> int:
 	#checks if slot is full, if so, if it is taken by an illegal item
 	if not room[y * Rlen + x].is_empty:
 		if room[y * Rlen + x].item.illegal:
-			print("ILLEGAL ITEM FOUND")
 			return 1
 		return 0
 	
-	#sets current case as full to avoid checking it again
+	#sets current case as checked to avoid checking it again
 	room[y * Rlen + x].is_checked = true;
 	var fail :int = 0
 	
-	if y > 0 and not room[y-1 * Rlen + x].is_checked:			#check up
+	if y > 0 and not room[y-1 * Rlen + x].is_checked:		#check up
 		fail += floodfill(x, y-1)
 	if y < Rhgt-1 and not room[y+1 * Rlen + x].is_checked:	#check down
 		fail += floodfill(x, y+1)
-	if x > 0 and not room[y * Rlen + x-1].is_checked:			#check left
+	if x > 0 and not room[y * Rlen + x-1].is_checked:		#check left
 		fail += floodfill(x-1, y)
 	if x < Rlen-1 and not room[y * Rlen + x+1].is_checked:	#check right
 		fail += floodfill(x+1, y)
@@ -35,13 +34,15 @@ func inspection(start: Vector2, piece: GridContainer) -> bool:
 	for n:Node in tmp:
 		if n is ItemSlot:
 			room.append(n)
+			n.is_checked = false
+			if n.is_wall:
+				n.is_checked = true
 	
 	Rlen = piece.columns
 	Rhgt = room.size() / Rlen
 	
 	#doing actual floodfill
 	if floodfill(start.x, start.y) == 0:
-		print("NO CONTRABAND FOUND")
 		room.clear()
 		return false
 	room.clear()

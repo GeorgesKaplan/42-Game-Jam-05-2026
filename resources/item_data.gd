@@ -7,7 +7,7 @@ extends Resource
 @export var shape: Shape = Shape.SINGLE
 ## The point of origin where an object is grabbed, in a 3x3 matrix.
 ## Starts from the bottom left corner.
-@export var origin: Array = [1,1]
+@export var origin: Array = [0,2]
 
 # TODO: link shape and origin
 

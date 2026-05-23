@@ -6,6 +6,9 @@ extends Panel
 @onready var item_icon: TextureRect = $ItemIcon
 ## The actual item stored in the slot.
 @export var item: ItemData
+## Defines if the slot is a wall
+## A wall cannot ever contain items
+@export var is_wall: bool = false
 ## Defines if the slot is available or not.
 ## Must be set to false when slot is filled and true when emptied.
 var is_empty: bool = true
@@ -13,6 +16,8 @@ var is_empty: bool = true
 var is_checked: bool = false
 
 func _ready() -> void:
+	if item:
+		is_empty = false
 	#print_debug("Node ", self, " holds texture ", item_icon.texture)
 	update_ui()
 
@@ -41,6 +46,7 @@ func _get_drag_data(_at_position: Vector2) -> Variant:
 	
 	set_drag_preview(drag_preview)
 	item_icon.hide()
+	is_empty = true
 	return self
 
 func _can_drop_data(_at_position: Vector2, _data: Variant) -> bool:
@@ -51,6 +57,7 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	var tmp: ItemData = item
 	var safe_data: ItemSlot = data
 	item = safe_data.item
+	is_empty = false
 	safe_data.item = tmp
 	item_icon.show()
 	safe_data.item_icon.show()

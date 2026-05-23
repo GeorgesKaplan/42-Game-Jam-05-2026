@@ -8,13 +8,14 @@ var drag_data: ItemSlot = null
 
 func _notification(what: int) -> void:
 	if what == Node.NOTIFICATION_DRAG_BEGIN:
-		print_debug("Dragging started")
+		#print_debug("Dragging started")
 		drag_data = get_viewport().gui_get_drag_data()
 	if what == Node.NOTIFICATION_DRAG_END:
-		print_debug("Dragging ended")
-		Inspection.inspection(Vector2(0,1), grid_container)
+		#print_debug("Dragging ended")
+		if Inspection.inspection(Vector2(0,1), grid_container):
+			print("FOUND CONTRABAND")
 		if not is_drag_successful():
-			print_debug("Dragging failed")
+			#print_debug("Dragging failed")
 			if drag_data:
 				drag_data.item_icon.show()
 				drag_data = null

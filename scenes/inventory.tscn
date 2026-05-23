@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://2ohluxbgkibr" path="res://resources/PLACEHOLDERS/rum.png" id="3_ty45s"]
 [ext_resource type="Resource" uid="uid://dgpsbu7efffxh" path="res://resources/items/flag.tres" id="3_yyk2a"]
 [ext_resource type="Resource" uid="uid://cgs5ckcuyw1bv" path="res://resources/items/rum.tres" id="5_uae8j"]
+[ext_resource type="Resource" uid="uid://b4haxsgvu665d" path="res://resources/items/GUN.tres" id="7_g71ie"]
 [ext_resource type="Texture2D" uid="uid://c1w4nwy81qpmy" path="res://resources/PLACEHOLDERS/GUN.png" id="7_s887n"]
 
 [node name="Inventory" type="Panel" unique_id=1890885336]
@@ -211,6 +212,7 @@ stretch_mode = 5
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 script = ExtResource("1_hj2ta")
+item = ExtResource("7_g71ie")
 
 [node name="ItemIcon" type="TextureRect" parent="GridContainer/ItemSlot10" unique_id=1465435413]
 layout_mode = 1
