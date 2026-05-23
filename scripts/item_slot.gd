@@ -3,7 +3,8 @@ extends Panel
 
 ## The sprite display of the item stored in the slot.
 ## Note that the actual sprite must be accessed with [code]item_icon.texture[/code].
-@onready var item_icon: TextureRect = $ItemIcon
+#@onready var item_icon: TextureRect = $ItemIcon
+@onready var item_icon: Sprite2D = $ItemIcon
 ## The actual item stored in the slot.
 @export var item: ItemData
 ## Defines if the slot is a wall
