@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bq6rp6yn01lh8"]
 
 [ext_resource type="Script" uid="uid://loxmquend51r" path="res://scripts/item_slot.gd" id="1_l0xgl"]
-[ext_resource type="Texture2D" uid="uid://cgh33jmjwvsss" path="res://resources/sprites/Antlers_3x2-1-2.png" id="2_eqbkm"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_567tv"]
 
@@ -26,6 +25,4 @@ scale = Vector2(0.25, 0.25)
 mouse_filter = 2
 
 [node name="ItemIcon" type="Sprite2D" parent="." unique_id=428860672]
-position = Vector2(196, 0)
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_eqbkm")

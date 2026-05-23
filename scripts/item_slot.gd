@@ -106,10 +106,12 @@ func refresh_grid_occupancy() -> void:
 func update_ui() -> void:
 	if not item:
 		item_icon.texture = null
+		item_icon.position = Vector2.ZERO
 		tooltip_text = ""
 		return
 
 	item_icon.texture = item.sprite
+	item_icon.position = item.get_shape_span()
 	tooltip_text = item.name
 
 func _get_anchor() -> Vector2:
