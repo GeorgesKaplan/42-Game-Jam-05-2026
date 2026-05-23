@@ -1,7 +1,7 @@
 extends Panel
 
 # preload cursor textures
-var drag_data: Variant = null
+var drag_data: ItemSlot = null
 #func _ready() -> void:
 	#Input.set_custom_mouse_cursor(PRELOADED_TEXTURE, Input.CURSOR_TYPE)
 
@@ -14,5 +14,5 @@ func _notification(what: int) -> void:
 		if not is_drag_successful():
 			print_debug("Dragging failed")
 			if drag_data:
-				drag_data.show()
+				drag_data.item_icon.show()
 				drag_data = null
