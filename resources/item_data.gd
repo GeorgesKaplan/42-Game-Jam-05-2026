@@ -35,46 +35,76 @@ enum GrabAnchor {
 	BOT_RIGHT,
 }
 
-const SHAPE_DATA: Dictionary[Shape, Array] = {
-	Shape.SINGLE: [	[0, 0, 0],
-					[0, 0, 0],
-					[1, 0, 0]],
+const SHAPE_DATA: Dictionary[Shape, Dictionary] = {
+	Shape.SINGLE: {
+		"shape_data": [	[0, 0, 0],
+						[0, 0, 0],
+						[1, 0, 0]],
+		"span": Vector2(64, 64),
+	},
 
-	Shape.TALL: [	[0, 0, 0],
-					[1, 0, 0],
-					[1, 0, 0]],
+	Shape.TALL: {
+		"shape_data": [	[0, 0, 0],
+						[1, 0, 0],
+						[1, 0, 0]],
+		"span": Vector2(64, 0),
+	},
 
-	Shape.LONG: [	[0, 0, 0],
-					[0, 0, 0],
-					[1, 1, 0]],
+	Shape.LONG: {
+		"shape_data": [	[0, 0, 0],
+						[0, 0, 0],
+						[1, 1, 0]],
+		"span": Vector2(2, 1),
+	},
 
-	Shape.SQUARE: [	[0, 0, 0],
-					[1, 1, 0],
-					[1, 1, 0]],
+	Shape.SQUARE: {
+		"shape_data": [	[0, 0, 0],
+						[1, 1, 0],
+						[1, 1, 0]],
+		"span": Vector2(128, 0),
+	},
 
-	Shape.VTALL: [	[1, 0, 0],
-					[1, 0, 0],
-					[1, 0, 0]],
+	Shape.VTALL: {
+		"shape_data": [	[1, 0, 0],
+						[1, 0, 0],
+						[1, 0, 0]],
+		"span": Vector2(64, -64),
+	},
 
-	Shape.VLONG: [	[0, 0, 0],
-					[0, 0, 0],
-					[1, 1, 1]],
+	Shape.VLONG: {
+		"shape_data": [	[0, 0, 0],
+						[0, 0, 0],
+						[1, 1, 1]],
+		"span": Vector2(3, 1),
+	},
 
-	Shape.LVTALL: [	[1, 1, 0],
-					[1, 1, 0],
-					[1, 1, 0]],
+	Shape.LVTALL: {
+		"shape_data": [	[1, 1, 0],
+						[1, 1, 0],
+						[1, 1, 0]],
+		"span": Vector2(2, 3),
+	},
 
-	Shape.LOWU: [	[0, 0, 0],
-					[1, 0, 1],
-					[1, 1, 1]],
+	Shape.LOWU: {
+		"shape_data": [	[0, 0, 0],
+						[1, 0, 1],
+						[1, 1, 1]],
+		"span": Vector2(196, 0),
+	},
 
-	Shape.WIDE: [	[0, 0, 0],
-					[1, 1, 1],
-					[1, 1, 1]],
+	Shape.WIDE: {
+		"shape_data": [	[0, 0, 0],
+						[1, 1, 1],
+						[1, 1, 1]],
+		"span": Vector2(3, 2),
+	},
 
-	Shape.LARGE: [	[1, 1, 1],
-					[1, 1, 1],
-					[1, 1, 1]],
+	Shape.LARGE: {
+		"shape_data": [	[1, 1, 1],
+						[1, 1, 1],
+						[1, 1, 1]],
+		"span": Vector2(3, 3),
+	},
 }
 
 const GRAB_DATA: Dictionary[GrabAnchor, Array] = {
@@ -90,7 +120,10 @@ const GRAB_DATA: Dictionary[GrabAnchor, Array] = {
 }
 
 func get_shape_data() -> Array:
-	return SHAPE_DATA[shape]
+	return SHAPE_DATA[shape]["shape_data"]
+
+func get_shape_span() -> Vector2:
+	return SHAPE_DATA[shape]["span"]
 
 func get_grab_data() -> Array:
 	return GRAB_DATA[origin]
