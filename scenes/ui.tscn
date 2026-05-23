@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bdxbnxpcv8naf"]
 
+[ext_resource type="Script" uid="uid://sj1avxwneg6d" path="res://scenes/progress_bar.gd" id="1_nt7q6"]
+
 [node name="UI" type="Control" unique_id=94182512]
 layout_mode = 3
 anchors_preset = 15
@@ -21,3 +23,4 @@ offset_right = 392.5
 offset_bottom = -24.0
 grow_horizontal = 2
 grow_vertical = 0
+script = ExtResource("1_nt7q6")
