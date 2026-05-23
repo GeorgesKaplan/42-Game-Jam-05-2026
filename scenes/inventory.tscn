@@ -8,12 +8,15 @@
 [ext_resource type="Resource" uid="uid://kqjii3uku47r" path="res://resources/items/bottles.tres" id="4_s887n"]
 [ext_resource type="Resource" uid="uid://kxh7nqacsek4" path="res://resources/items/tall_barrel.tres" id="6_g71ie"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s887n"]
+
 [node name="Inventory" type="Panel" unique_id=1890885336]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_s887n")
 script = ExtResource("1_53g1v")
 
 [node name="BGGridContainer" type="GridContainer" parent="." unique_id=1290958335]

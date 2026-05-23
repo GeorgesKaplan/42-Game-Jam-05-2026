@@ -38,11 +38,15 @@ func inspection(start: Vector2, piece: GridContainer) -> bool:
 	for n: Node in tmp:
 		if n is ItemSlot:
 			room.append(n)
+			@warning_ignore("unsafe_property_access")
 			n.is_checked = false
+			@warning_ignore("unsafe_property_access")
 			if n.is_wall:
+				@warning_ignore("unsafe_property_access")
 				n.is_checked = true
 	
 	Rlen = piece.columns
+	@warning_ignore("integer_division")
 	Rhgt = room.size() / Rlen
 	
 	#doing actual floodfill
