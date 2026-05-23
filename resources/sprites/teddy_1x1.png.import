@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7jhla4yc4cqd"
-path="res://.godot/imported/flag.png-37927d9d86d0c5f9be41d663e9d45974.ctex"
+uid="uid://dcut3gvan61ei"
+path="res://.godot/imported/teddy_1x1.png-c600906f8ed103f7c798282d37be785e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/PLACEHOLDERS/flag.png"
-dest_files=["res://.godot/imported/flag.png-37927d9d86d0c5f9be41d663e9d45974.ctex"]
+source_file="res://resources/sprites/teddy_1x1.png"
+dest_files=["res://.godot/imported/teddy_1x1.png-c600906f8ed103f7c798282d37be785e.ctex"]
 
 [params]
 

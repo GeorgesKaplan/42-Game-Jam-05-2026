@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1w4nwy81qpmy"
-path="res://.godot/imported/GUN.png-e7e3df12a195249082155ba1795fa6d4.ctex"
+uid="uid://bcyfjeicxotb6"
+path="res://.godot/imported/Bouteilles_1x3.png-b4b69ab8c2c302eda62a550e7b3a6abf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/PLACEHOLDERS/GUN.png"
-dest_files=["res://.godot/imported/GUN.png-e7e3df12a195249082155ba1795fa6d4.ctex"]
+source_file="res://resources/sprites/Bouteilles_1x3.png"
+dest_files=["res://.godot/imported/Bouteilles_1x3.png-b4b69ab8c2c302eda62a550e7b3a6abf.ctex"]
 
 [params]
 

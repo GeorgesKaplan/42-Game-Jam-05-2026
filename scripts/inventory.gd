@@ -13,11 +13,13 @@ func _notification(what: int) -> void:
 		drag_data = get_viewport().gui_get_drag_data()
 	if what == Node.NOTIFICATION_DRAG_END:
 		#print_debug("Dragging ended")
-		#if Inspection.inspection(Vector2(0,1), grid_container):
-			#print("FOUND CONTRABAND")
-		if drag_data and not is_drag_successful():
-			#print_debug("Dragging failed")
-			drag_data.item_icon.show()
-			drag_data.is_empty = drag_data.item == null
-			drag_data.update_ui()
+		if drag_data:
+			drag_data.is_drag_origin = false
+			drag_data.refresh_grid_occupancy()
+			if not is_drag_successful():
+				#print_debug("Dragging failed")
+				drag_data.item_icon.show()
+				drag_data.update_ui()
+		if Inspection.inspection(Vector2(0,1), grid_container):
+			print("FOUND CONTRABAND")
 		drag_data = null

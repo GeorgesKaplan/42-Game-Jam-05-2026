@@ -18,6 +18,7 @@ enum Shape {
 	VTALL,	## 1x3
 	VLONG,	## 3x1
 	LVTALL,	## 2x3
+	LOWU, ## 3x2-1-2
 	WIDE,	## 3x2
 	LARGE,	## 3x3
 }
@@ -62,6 +63,10 @@ const SHAPE_DATA: Dictionary[Shape, Array] = {
 	Shape.LVTALL: [	[1, 1, 0],
 					[1, 1, 0],
 					[1, 1, 0]],
+
+	Shape.LOWU: [	[0, 0, 0],
+					[1, 0, 1],
+					[1, 1, 1]],
 
 	Shape.WIDE: [	[0, 0, 0],
 					[1, 1, 1],

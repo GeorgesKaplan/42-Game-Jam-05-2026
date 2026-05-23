@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2ohluxbgkibr"
-path="res://.godot/imported/rum.png-622367c75b68ed6e0f6f13e71fb32620.ctex"
+uid="uid://cgh33jmjwvsss"
+path="res://.godot/imported/Antlers_3x2-1-2.png-5b6edb3dfa1343931154f3768a440563.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/PLACEHOLDERS/rum.png"
-dest_files=["res://.godot/imported/rum.png-622367c75b68ed6e0f6f13e71fb32620.ctex"]
+source_file="res://resources/sprites/Antlers_3x2-1-2.png"
+dest_files=["res://.godot/imported/Antlers_3x2-1-2.png-5b6edb3dfa1343931154f3768a440563.ctex"]
 
 [params]
 
