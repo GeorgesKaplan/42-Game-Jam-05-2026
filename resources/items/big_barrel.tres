@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dqmkssb3t0r0h"]
+
+[ext_resource type="Script" uid="uid://bfa760mek7xh3" path="res://resources/item_data.gd" id="1_fou4e"]
+[ext_resource type="Texture2D" uid="uid://duawa0wg71rlg" path="res://resources/sprites/Tonneau_2x2.png" id="2_eaq12"]
+
+[resource]
+script = ExtResource("1_fou4e")
+name = "Big Barrel"
+sprite = ExtResource("2_eaq12")
+shape = 3
+metadata/_custom_type_script = "uid://bfa760mek7xh3"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://kxh7nqacsek4"]
+
+[ext_resource type="Script" uid="uid://bfa760mek7xh3" path="res://resources/item_data.gd" id="1_ixw0r"]
+[ext_resource type="Texture2D" uid="uid://cramggg0dcnij" path="res://resources/sprites/Tonneau_1x2.png" id="2_rv4dn"]
+
+[resource]
+script = ExtResource("1_ixw0r")
+name = "Tall Barrel"
+sprite = ExtResource("2_rv4dn")
+shape = 1
+origin = 7
+metadata/_custom_type_script = "uid://bfa760mek7xh3"

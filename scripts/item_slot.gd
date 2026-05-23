@@ -16,14 +16,16 @@ var is_empty: bool = true
 var is_checked: bool = false
 
 func _ready() -> void:
-	if item:
-		is_empty = false
-	#print_debug("Node ", self, " holds texture ", item_icon.texture)
+	_sync_slot_state()
 	update_ui()
+
+func _sync_slot_state() -> void:
+	is_empty = item == null
 
 func update_ui() -> void:
 	if not item:
 		item_icon.texture = null
+		tooltip_text = ""
 		return
 
 	item_icon.texture = item.sprite
@@ -54,16 +56,21 @@ func _get_drag_data(_at_position: Vector2) -> Variant:
 	is_empty = true
 	return self
 
-func _can_drop_data(_at_position: Vector2, _data: Variant) -> bool:
-	return is_empty
+func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
+	if is_wall or data == self or not data is ItemSlot:
+		return false
+
+	var source_slot: ItemSlot = data
+	return source_slot.item != null
 
 func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	#print_debug("Item slot ", self, " received ", data)
 	var tmp: ItemData = item
 	var safe_data: ItemSlot = data
 	item = safe_data.item
-	is_empty = false
 	safe_data.item = tmp
+	_sync_slot_state()
+	safe_data._sync_slot_state()
 	item_icon.show()
 	safe_data.item_icon.show()
 	update_ui()

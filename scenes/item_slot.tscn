@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bq6rp6yn01lh8"]
+
+[ext_resource type="Script" uid="uid://loxmquend51r" path="res://scripts/item_slot.gd" id="1_l0xgl"]
+[ext_resource type="Texture2D" uid="uid://cramggg0dcnij" path="res://resources/sprites/Tonneau_1x2.png" id="2_eqbkm"]
+
+[node name="ItemSlot" type="Panel" unique_id=95496511]
+custom_minimum_size = Vector2(128, 128)
+script = ExtResource("1_l0xgl")
+
+[node name="ItemIcon" type="TextureRect" parent="." unique_id=898138106]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+texture = ExtResource("2_eqbkm")
+expand_mode = 5
+stretch_mode = 6
