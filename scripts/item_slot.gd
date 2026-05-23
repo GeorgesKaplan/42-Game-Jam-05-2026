@@ -14,6 +14,9 @@ extends Panel
 var is_empty: bool = true
 ## tells inspector if this panel has already been checked
 var is_checked: bool = false
+## slot containing an image's origin point
+## only the origin point can display an item's image
+var origin_point: bool = false
 
 func _ready() -> void:
 	if item:
@@ -22,7 +25,7 @@ func _ready() -> void:
 	update_ui()
 
 func update_ui() -> void:
-	if not item:
+	if not origin_point or not item:
 		item_icon.texture = null
 		return
 	
@@ -46,11 +49,14 @@ func _get_drag_data(_at_position: Vector2) -> Variant:
 	
 	set_drag_preview(drag_preview)
 	item_icon.hide()
+	origin_point = false
 	is_empty = true
 	return self
 
-func _can_drop_data(_at_position: Vector2, _data: Variant) -> bool:
-	return is_empty
+func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
+	var thing: ItemSlot = data
+	# check for every non-empty part of item's shape if it can go in its own slot
+	return is_empty and not is_wall
 
 func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	print_debug("Item slot ", self, " received ", data)
@@ -58,6 +64,9 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	var safe_data: ItemSlot = data
 	item = safe_data.item
 	is_empty = false
+	origin_point = true
+	# CHANGE OTHER SLOTS AFTER THIS
+	# ONLY THE SQUARE WHERE YOU HOLD THE ITEM SHOULD DISPLAY THE IMAGE
 	safe_data.item = tmp
 	item_icon.show()
 	safe_data.item_icon.show()

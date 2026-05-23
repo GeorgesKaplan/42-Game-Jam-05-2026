@@ -6,16 +6,19 @@ var Rhgt: int
 
 #returns a positive interger if an illegal item is found via the x & y starting point
 func floodfill(x: int, y: int) -> int:
+	#sets current case as checked to avoid checking it again
+	room[y * Rlen + x].is_checked = true;
+	print_debug(x, ':', y, " : CHECKING COORDS")
+
 	#checks if slot is full, if so, if it is taken by an illegal item
 	if not room[y * Rlen + x].is_empty:
+		print_debug(x, ':', y, " : ITEM FOUND")
 		if room[y * Rlen + x].item.illegal:
+			print_debug(x, ':', y, " : CONTRABAND FOUND")
 			return 1
 		return 0
 	
-	#sets current case as checked to avoid checking it again
-	room[y * Rlen + x].is_checked = true;
 	var fail :int = 0
-	
 	if y > 0 and not room[y-1 * Rlen + x].is_checked:		#check up
 		fail += floodfill(x, y-1)
 	if y < Rhgt-1 and not room[y+1 * Rlen + x].is_checked:	#check down
@@ -25,6 +28,7 @@ func floodfill(x: int, y: int) -> int:
 	if x < Rlen-1 and not room[y * Rlen + x+1].is_checked:	#check right
 		fail += floodfill(x+1, y)
 	
+	print_debug(x, ':', y, " : ", fail, " CONTRABANDS FOUND")
 	return fail
 
 #returns true if contraband is found and false otherwise
