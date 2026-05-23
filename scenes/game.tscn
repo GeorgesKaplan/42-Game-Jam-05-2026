@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://ckn72dfdxu671"]
+
+[ext_resource type="PackedScene" uid="uid://rxw7o4fkyqvc" path="res://scenes/inventory.tscn" id="1_uwrxv"]
+
+[node name="Game" type="Node2D" unique_id=192646751]
+
+[node name="Control" type="Control" parent="." unique_id=1211970129]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1153.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=1241491242]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Inventory" parent="Control/HBoxContainer" unique_id=1745711909 instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="Control/HBoxContainer" unique_id=1853749128]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="Cargo" type="GridContainer" parent="Control/HBoxContainer" unique_id=1161566699]
+layout_mode = 2
+size_flags_horizontal = 3
