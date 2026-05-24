@@ -127,7 +127,6 @@ icon_alignment = 1
 script = ExtResource("8_a8y0u")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=11108270]
-visible = false
 position = Vector2(-3772, 0)
 texture = ExtResource("9_jkv2x")
 centered = false
