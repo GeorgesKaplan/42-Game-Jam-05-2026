@@ -2,11 +2,140 @@
 
 [ext_resource type="Script" uid="uid://dv2pjqdemn0kf" path="res://scripts/main.gd" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://bdxbnxpcv8naf" path="res://scenes/ui.tscn" id="2_0wfyh"]
+[ext_resource type="Script" uid="uid://cituoxhx80mqf" path="res://scenes/main_menu.gd" id="3_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://ckn72dfdxu671" path="res://scenes/game.tscn" id="3_sugp2"]
+[ext_resource type="Texture2D" uid="uid://0l4nlwcre06g" path="res://resources/Illustration_sans_titre.png" id="4_eb6dy"]
+[ext_resource type="Script" uid="uid://c8tlgrf87xjsf" path="res://scenes/start_game_button.gd" id="4_tbgi4"]
+[ext_resource type="Script" uid="uid://b4ini8n3mkuen" path="res://scenes/pause_menu.gd" id="5_tefeu"]
+[ext_resource type="Texture2D" uid="uid://cdyj8nsvje345" path="res://resources/Illustration_sans_titre_1.png" id="5_trceg"]
+[ext_resource type="AudioStream" uid="uid://cup8hiruomq1t" path="res://resources/ebunny-pirate-bay-guitar-376548.mp3" id="7_o6xl0"]
+[ext_resource type="AudioStream" uid="uid://dmvuce15ep4nf" path="res://resources/Smuggler's life Water ambiance.wav" id="8_85g3d"]
+[ext_resource type="AudioStream" uid="uid://wbjhwd300twg" path="res://resources/Smuggler's life harbor ambience.wav" id="9_choun"]
+[ext_resource type="AudioStream" uid="uid://cwkay5uopu7cx" path="res://resources/Smuggler's life Boat creaking.wav" id="10_choun"]
 
 [node name="Main" type="Node" unique_id=1391963116]
 script = ExtResource("1_o5qli")
 
 [node name="UI" parent="." unique_id=94182512 instance=ExtResource("2_0wfyh")]
 
+[node name="popupInventory" type="MarginContainer" parent="UI" unique_id=1765839333]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="mainMenu" type="MarginContainer" parent="UI" unique_id=2019969573]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_jyhfs")
+
+[node name="MenuBoard" type="MarginContainer" parent="UI/mainMenu" unique_id=1931784199]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="NinePatchRect" type="NinePatchRect" parent="UI/mainMenu/MenuBoard" unique_id=1985009824]
+custom_minimum_size = Vector2(400, 500)
+layout_mode = 2
+texture = ExtResource("4_eb6dy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/mainMenu/MenuBoard/NinePatchRect" unique_id=907260526]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 500.0
+
+[node name="Seperator" type="Control" parent="UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer" unique_id=1126290487]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer" unique_id=476829599]
+modulate = Color(0.22352941, 1, 1, 1)
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "It's a Smugglers Life For Me"
+horizontal_alignment = 1
+
+[node name="Seperator2" type="Control" parent="UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer" unique_id=1165427546]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer" unique_id=435815374]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="StartGameButton" type="Button" parent="UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/MarginContainer" unique_id=224258491]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "Start Game"
+icon = ExtResource("5_trceg")
+flat = true
+icon_alignment = 1
+script = ExtResource("4_tbgi4")
+
+[node name="PauseMenu" type="MarginContainer" parent="UI" unique_id=1919241987]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_tefeu")
+
+[node name="PauseMenuBoard" type="MarginContainer" parent="UI/PauseMenu" unique_id=1984902620]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="NinePatchRect" type="NinePatchRect" parent="UI/PauseMenu/PauseMenuBoard" unique_id=653327285]
+custom_minimum_size = Vector2(800, 600)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/PauseMenu/PauseMenuBoard/NinePatchRect" unique_id=451091029]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Seperator" type="Control" parent="UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer" unique_id=38170431]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer" unique_id=533238491]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Button" type="Button" parent="UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer/MarginContainer" unique_id=642101658]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Continue"
+icon = ExtResource("5_trceg")
+icon_alignment = 1
+
 [node name="Game" parent="." unique_id=192646751 instance=ExtResource("3_sugp2")]
+visible = false
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=404405370]
+stream = ExtResource("7_o6xl0")
+volume_db = -80.0
+
+[node name="WaterAmbience" type="AudioStreamPlayer" parent="." unique_id=1877466143]
+stream = ExtResource("8_85g3d")
+volume_db = -80.0
+
+[node name="HarborAmbience" type="AudioStreamPlayer" parent="." unique_id=1621339954]
+stream = ExtResource("9_choun")
+
+[node name="BoatCreaking" type="AudioStreamPlayer" parent="." unique_id=1182430054]
+stream = ExtResource("10_choun")
+
+[connection signal="button_down" from="UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/MarginContainer/StartGameButton" to="UI/mainMenu" method="_on_start_game_button_button_down"]
+[connection signal="button_up" from="UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer/MarginContainer/Button" to="UI/PauseMenu" method="_on_button_button_up"]

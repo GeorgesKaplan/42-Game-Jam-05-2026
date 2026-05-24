@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dmvuce15ep4nf"
+path="res://.godot/imported/Smuggler's life Water ambiance.wav-37b34d3da69a363b538ebe5ed4eb78b0.sample"
+
+[deps]
+
+source_file="res://resources/Smuggler's life Water ambiance.wav"
+dest_files=["res://.godot/imported/Smuggler's life Water ambiance.wav-37b34d3da69a363b538ebe5ed4eb78b0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
