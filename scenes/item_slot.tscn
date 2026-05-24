@@ -5,7 +5,7 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_567tv"]
 
 [node name="ItemSlot" type="Panel" unique_id=95496511]
-custom_minimum_size = Vector2(128, 128)
+custom_minimum_size = Vector2(32, 32)
 offset_right = 128.0
 offset_bottom = 128.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_567tv")

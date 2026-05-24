@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://ckn72dfdxu671"]
 
 [ext_resource type="PackedScene" uid="uid://rxw7o4fkyqvc" path="res://scenes/inventory.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://cuoxi5nbsya1t" path="res://scenes/ship.tscn" id="2_yqjtg"]
+[ext_resource type="Script" uid="uid://v5mixq57slxr" path="res://scripts/ship_camera.gd" id="3_lnu2h"]
 
 [node name="Game" type="Node2D" unique_id=192646751]
 
@@ -33,3 +35,10 @@ size_flags_stretch_ratio = 2.0
 [node name="Cargo" type="GridContainer" parent="Control/HBoxContainer" unique_id=1161566699]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="Ship" parent="." unique_id=334103971 instance=ExtResource("2_yqjtg")]
+
+[node name="ShipCamera" type="Camera2D" parent="Ship" unique_id=805416413]
+position = Vector2(568, 0)
+zoom = Vector2(0.3, 0.3)
+script = ExtResource("3_lnu2h")

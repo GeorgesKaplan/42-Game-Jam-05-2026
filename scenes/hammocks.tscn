@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dqfenhptvjbt"]
+
+[ext_resource type="Texture2D" uid="uid://rvb01jbg7nbc" path="res://resources/sprites/Hammocks.png" id="1_1ruuh"]
+
+[node name="Hammocks" type="Control" unique_id=1018072521]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=857601574]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1ruuh")
+expand_mode = 1
+stretch_mode = 5

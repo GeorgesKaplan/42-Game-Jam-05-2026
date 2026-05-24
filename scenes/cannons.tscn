@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://x4hkgxrs6qol"]
+
+[ext_resource type="Texture2D" uid="uid://dcxwsqjreygmg" path="res://resources/sprites/Cannons.png" id="1_pnf3n"]
+
+[node name="Cannons" type="Control" unique_id=1410184748]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1922542825]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_pnf3n")
+expand_mode = 1
+stretch_mode = 5
