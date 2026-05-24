@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c2cxgb1rha1pr"]
+
+[ext_resource type="Script" uid="uid://cbktlyt3687kt" path="res://scripts/deck.gd" id="1_4bvp8"]
+[ext_resource type="PackedScene" uid="uid://rxw7o4fkyqvc" path="res://scenes/inventory.tscn" id="2_opbk4"]
+
+[node name="Deck" type="ScrollContainer" unique_id=546211940]
+custom_minimum_size = Vector2(416, 0)
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 40.0
+grow_vertical = 2
+size_flags_horizontal = 0
+vertical_scroll_mode = 0
+script = ExtResource("1_4bvp8")
+
+[node name="Inventory" parent="." unique_id=799175012 instance=ExtResource("2_opbk4")]
+layout_mode = 2

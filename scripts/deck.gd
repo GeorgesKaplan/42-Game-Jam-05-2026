@@ -5,4 +5,4 @@ extends ScrollContainer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#inventory.theme.set_constant()
-	inventory.init_inventory(3, 12)
+	inventory.init_inventory(13, 3)

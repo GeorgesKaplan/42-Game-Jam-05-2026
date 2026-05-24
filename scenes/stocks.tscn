@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cy2y6o466hxio"]
+
+[ext_resource type="Texture2D" uid="uid://bgp41yr6uuvhg" path="res://resources/sprites/Stocks.png" id="1_vawqy"]
+
+[node name="Stocks" type="Control" unique_id=502331617]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=111275444]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_vawqy")
+expand_mode = 1
+stretch_mode = 5

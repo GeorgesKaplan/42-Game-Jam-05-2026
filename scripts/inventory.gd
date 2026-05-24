@@ -38,4 +38,3 @@ func _notification(what: int) -> void:
 		if Inspection.inspection(Vector2(0,1), grid_container):
 			print("FOUND CONTRABAND")
 		drag_data = null
-

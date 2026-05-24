@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bc23c13f2hw4o"]
+
+[ext_resource type="Texture2D" uid="uid://c58nt6stfnqgb" path="res://resources/sprites/Kitchen.png" id="1_7ilqw"]
+
+[node name="Kitchen" type="Control" unique_id=1384186869]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1884893828]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_7ilqw")
+expand_mode = 1
+stretch_mode = 5

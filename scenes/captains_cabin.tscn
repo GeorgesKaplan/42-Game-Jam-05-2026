@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://0he83c6ro05q"]
+[gd_scene format=3 uid="uid://biqa73mwgct8p"]
 
 [ext_resource type="Texture2D" uid="uid://dj67nt6emk42g" path="res://resources/sprites/CaptainsCabin.png" id="1_0a45g"]
 [ext_resource type="Script" uid="uid://ycky8bmh5q5e" path="res://scripts/captains_cabin.gd" id="1_ja6mj"]
@@ -18,18 +18,14 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -65.0
-offset_top = -56.0
-offset_right = -65.0
-offset_bottom = -56.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.1, 1.1)
 texture = ExtResource("1_0a45g")
 expand_mode = 1
-stretch_mode = 2
+stretch_mode = 5
 
 [node name="Inventory" parent="." unique_id=1890885336 instance=ExtResource("2_5vpi8")]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
