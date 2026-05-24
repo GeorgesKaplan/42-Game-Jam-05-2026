@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c2cxgb1rha1pr"]
 
 [ext_resource type="Script" uid="uid://cbktlyt3687kt" path="res://scripts/deck.gd" id="1_4bvp8"]
-[ext_resource type="PackedScene" uid="uid://rxw7o4fkyqvc" path="res://scenes/inventory.tscn" id="2_opbk4"]
+[ext_resource type="PackedScene" uid="uid://dl2c0njvy78ll" path="res://scenes/deckinv.tscn" id="2_6rnap"]
 
 [node name="Deck" type="ScrollContainer" unique_id=546211940]
 offset_right = 819.0
@@ -9,5 +9,5 @@ offset_bottom = 303.0
 vertical_scroll_mode = 0
 script = ExtResource("1_4bvp8")
 
-[node name="Inventory" parent="." unique_id=799175012 instance=ExtResource("2_opbk4")]
+[node name="Inventory" parent="." unique_id=2063165415 instance=ExtResource("2_6rnap")]
 layout_mode = 2

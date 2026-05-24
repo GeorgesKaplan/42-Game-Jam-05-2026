@@ -133,6 +133,7 @@ func refresh_grid_occupancy() -> void:
 ## Refreshes the visible sprite and tooltip so the panel reflects the current
 ## contents of the slot.
 func update_ui() -> void:
+	print_debug("WENT HERE")
 	if not is_drag_origin or not item:
 		item_icon.texture = null
 		item_icon.position = Vector2.ZERO

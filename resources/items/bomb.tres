@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://b88uvsxsahr7s"]
+
+[ext_resource type="Script" uid="uid://bfa760mek7xh3" path="res://resources/item_data.gd" id="1_dg617"]
+[ext_resource type="Texture2D" uid="uid://tea6i6niolv6" path="res://resources/sprites/bomb_1x1.png" id="2_m0u58"]
+
+[resource]
+script = ExtResource("1_dg617")
+name = "bomb"
+sprite = ExtResource("2_m0u58")
+illegal = true
+origin = 6
+value = 175
+metadata/_custom_type_script = "uid://bfa760mek7xh3"

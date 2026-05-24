@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dm8cj3t5gefio"]
+
+[ext_resource type="Script" uid="uid://bfa760mek7xh3" path="res://resources/item_data.gd" id="1_fvy26"]
+[ext_resource type="Texture2D" uid="uid://df4an065i8514" path="res://resources/sprites/shrooms_1x1.png" id="2_fvy26"]
+
+[resource]
+script = ExtResource("1_fvy26")
+name = "shrooms"
+sprite = ExtResource("2_fvy26")
+illegal = true
+origin = 6
+value = 160
+metadata/_custom_type_script = "uid://bfa760mek7xh3"

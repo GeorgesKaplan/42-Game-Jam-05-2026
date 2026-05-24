@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://f68ymq5npnei"]
+
+[ext_resource type="Script" uid="uid://bfa760mek7xh3" path="res://resources/item_data.gd" id="1_h2oqk"]
+[ext_resource type="Texture2D" uid="uid://gh8tft3m3u3w" path="res://resources/sprites/armure_2-3-2x3-3-2.png" id="2_2q7ab"]
+
+[resource]
+script = ExtResource("1_h2oqk")
+name = "armor"
+sprite = ExtResource("2_2q7ab")
+shape = 6
+origin = 6
+value = 175
+metadata/_custom_type_script = "uid://bfa760mek7xh3"

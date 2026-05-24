@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cfewxb4il1qww"]
+
+[ext_resource type="Script" uid="uid://bfa760mek7xh3" path="res://resources/item_data.gd" id="1_kgwwt"]
+[ext_resource type="Texture2D" uid="uid://cj80vj1fxq8s1" path="res://resources/sprites/bones_1x2.png" id="2_n8urs"]
+
+[resource]
+script = ExtResource("1_kgwwt")
+name = "bones"
+sprite = ExtResource("2_n8urs")
+illegal = true
+shape = 2
+origin = 6
+value = 220
+metadata/_custom_type_script = "uid://bfa760mek7xh3"

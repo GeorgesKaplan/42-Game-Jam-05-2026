@@ -8,24 +8,28 @@ const Loading: Resource = preload("uid://bsdh43ptepor8")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	inventory.init_inventory(x, y)
-	load_cargo()#Loading.get_cargo())
-
-func bruteforce_item(thingy:ItemData, place:ItemSlot) -> void:
-	place.item = thingy
-	place.is_drag_origin = true
-	#breakpoint
-	place.update_ui()
-
-func load_cargo()->void: #cargo:Array[ItemData]) -> void:
+	print_debug("WENT HERE")
 	var line:Array = inventory.grid_container.get_children()
+	for i:ItemSlot in line:
+		i.update_ui()
+	#inventory.init_inventory(x, y)
+	#load_cargo()#Loading.get_cargo()
+
+#func bruteforce_item(thingy:ItemData, place:ItemSlot) -> void:
+	#place.item = thingy
+	#place.is_drag_origin = true
+	##breakpoint
+	#place.update_ui()
+
+#func load_cargo()->void: #cargo:Array[ItemData]) -> void:
+	#var line:Array = inventory.grid_container.get_children()
 	
 	## TEST
-	bruteforce_item(Loading.content[0], line[0])
-	bruteforce_item(Loading.content[1], line[24])
-	bruteforce_item(Loading.content[2], line[27])
-	bruteforce_item(Loading.content[3], line[29])
-	bruteforce_item(Loading.content[4], line[30])
+	#bruteforce_item(Loading.content[0], line[0])
+	#bruteforce_item(Loading.content[1], line[24])
+	#bruteforce_item(Loading.content[2], line[27])
+	#bruteforce_item(Loading.content[3], line[29])
+	#bruteforce_item(Loading.content[4], line[30])
 	## END TEST
 	
 	#var posX:int = 0
