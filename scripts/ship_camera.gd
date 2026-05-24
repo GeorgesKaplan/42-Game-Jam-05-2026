@@ -41,18 +41,17 @@ func zoom_in(is_in: bool) -> void:
 			target_zoom = Vector2(0.2, 0.2)
 
 	var tween: Tween = create_tween()
-
-	#@warning_ignore("return_value_discarded") # BUG: Chaotic zoom
-	#tween.tween_property(
-		#self,
-		#"global_position",
-		#get_viewport().get_mouse_position(),
-		#0.5
-	#)
 	@warning_ignore("return_value_discarded")
 	tween.tween_property(
 		self,
 		"zoom",
 		target_zoom,
+		0.5
+	)
+	@warning_ignore("return_value_discarded") # BUG: Chaotic zoom
+	tween.set_parallel().tween_property(
+		self,
+		"position",
+		get_viewport().get_mouse_position(),
 		0.5
 	)
