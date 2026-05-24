@@ -8,4 +8,5 @@ script = ExtResource("1_ckpu5")
 name = "Teddy Bear"
 sprite = ExtResource("2_6jtun")
 illegal = true
+origin = 6
 metadata/_custom_type_script = "uid://bfa760mek7xh3"

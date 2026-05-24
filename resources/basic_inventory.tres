@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CargoData" format=3 uid="uid://bsdh43ptepor8"]
+
+[ext_resource type="Script" uid="uid://bfa760mek7xh3" path="res://resources/item_data.gd" id="1_mo48m"]
+[ext_resource type="Resource" uid="uid://dhai7dnhmy1dr" path="res://resources/items/antlers.tres" id="2_gj5kp"]
+[ext_resource type="Script" uid="uid://ysmq1hxnflfl" path="res://resources/cargo_data.gd" id="2_mfaod"]
+[ext_resource type="Resource" uid="uid://dqmkssb3t0r0h" path="res://resources/items/big_barrel.tres" id="3_ij0y5"]
+[ext_resource type="Resource" uid="uid://kqjii3uku47r" path="res://resources/items/bottles.tres" id="4_omqbp"]
+[ext_resource type="Resource" uid="uid://kxh7nqacsek4" path="res://resources/items/tall_barrel.tres" id="5_jbn2x"]
+[ext_resource type="Resource" uid="uid://bvsdd1kejxb37" path="res://resources/items/teddy.tres" id="6_01qbj"]
+
+[resource]
+script = ExtResource("2_mfaod")
+content = Array[ExtResource("1_mo48m")]([ExtResource("6_01qbj"), ExtResource("2_gj5kp"), ExtResource("3_ij0y5"), ExtResource("4_omqbp"), ExtResource("5_jbn2x")])
+metadata/_custom_type_script = "uid://ysmq1hxnflfl"
