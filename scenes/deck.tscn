@@ -4,8 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://dl2c0njvy78ll" path="res://scenes/deckinv.tscn" id="2_6rnap"]
 
 [node name="Deck" type="ScrollContainer" unique_id=546211940]
-offset_right = 819.0
-offset_bottom = 303.0
+custom_minimum_size = Vector2(416, 0)
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 828.0
+grow_vertical = 2
+size_flags_horizontal = 0
 vertical_scroll_mode = 0
 script = ExtResource("1_4bvp8")
 

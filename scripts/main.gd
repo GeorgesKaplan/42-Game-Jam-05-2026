@@ -29,7 +29,3 @@ func _process(delta: float) -> void:
 		if (randf() <= 0.05):
 			$BoatCreaking.play()
 			print("Sound played")
-
-
-func _on_start_game_button_button_down() -> void:
-	pass

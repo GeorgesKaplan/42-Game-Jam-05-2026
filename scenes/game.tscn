@@ -39,6 +39,6 @@ size_flags_horizontal = 3
 [node name="Ship" parent="." unique_id=334103971 instance=ExtResource("2_yqjtg")]
 
 [node name="ShipCamera" type="Camera2D" parent="Ship" unique_id=805416413]
-position = Vector2(568, 0)
+position = Vector2(-562, -376)
 zoom = Vector2(0.3, 0.3)
 script = ExtResource("3_lnu2h")

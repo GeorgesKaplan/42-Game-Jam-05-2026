@@ -7,7 +7,7 @@ func _input(event: InputEvent) -> void:
 	@warning_ignore("unsafe_property_access")
 	if event is InputEventMouseButton:
 		@warning_ignore("unsafe_property_access")
-		if event.button_index == MOUSE_BUTTON_MIDDLE:
+		if event.button_index == MOUSE_BUTTON_RIGHT:
 			@warning_ignore("unsafe_property_access")
 			_is_dragging = event.pressed
 			@warning_ignore("unsafe_property_access")
@@ -48,10 +48,10 @@ func zoom_in(is_in: bool) -> void:
 		target_zoom,
 		0.5
 	)
-	@warning_ignore("return_value_discarded") # BUG: Chaotic zoom
-	tween.set_parallel().tween_property(
-		self,
-		"position",
-		get_viewport().get_mouse_position(),
-		0.5
-	)
+	#@warning_ignore("return_value_discarded") # BUG: Chaotic zoom
+	#tween.set_parallel().tween_property(
+		#self,
+		#"position",
+		#get_viewport().get_mouse_position(),
+		#0.5
+	#)
