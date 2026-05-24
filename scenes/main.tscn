@@ -129,6 +129,9 @@ icon_alignment = 1
 visible = false
 layout_mode = 0
 anchors_preset = 0
+anchor_bottom = 0.0
+offset_right = 806.0
+grow_vertical = 1
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=404405370]
 stream = ExtResource("7_o6xl0")

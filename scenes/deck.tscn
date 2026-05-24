@@ -4,10 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://rxw7o4fkyqvc" path="res://scenes/inventory.tscn" id="2_opbk4"]
 
 [node name="Deck" type="ScrollContainer" unique_id=546211940]
-custom_minimum_size = Vector2(416, 0)
+custom_minimum_size = Vector2(806, 0)
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_right = 828.0
+offset_right = 798.0
 grow_vertical = 2
 size_flags_horizontal = 0
 vertical_scroll_mode = 0

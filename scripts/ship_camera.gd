@@ -28,7 +28,7 @@ func _input(event: InputEvent) -> void:
 		_last_mouse_position = event.position
 
 func zoom_in(is_in: bool) -> void:
-	var zoom_step: float = 0.14
+	var zoom_step: float = 0.10
 	var target_zoom: Vector2 = self.zoom
 
 	if is_in:
