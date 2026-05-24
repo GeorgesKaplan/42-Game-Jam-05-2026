@@ -1,17 +1,324 @@
 [gd_scene format=3 uid="uid://c2cxgb1rha1pr"]
 
 [ext_resource type="Script" uid="uid://cbktlyt3687kt" path="res://scripts/deck.gd" id="1_4bvp8"]
-[ext_resource type="PackedScene" uid="uid://rxw7o4fkyqvc" path="res://scenes/inventory.tscn" id="2_opbk4"]
+[ext_resource type="Script" uid="uid://d12ojcv564vkm" path="res://scripts/inventory.gd" id="2_6rnap"]
 
 [node name="Deck" type="ScrollContainer" unique_id=546211940]
 custom_minimum_size = Vector2(806, 0)
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_right = 798.0
-grow_vertical = 2
+offset_right = 806.0
+offset_bottom = 418.0
 size_flags_horizontal = 0
+size_flags_vertical = 0
 vertical_scroll_mode = 0
 script = ExtResource("1_4bvp8")
 
-[node name="Inventory" parent="." unique_id=799175012 instance=ExtResource("2_opbk4")]
+[node name="Inventory" type="MarginContainer" parent="." unique_id=2021863162]
 layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+script = ExtResource("2_6rnap")
+
+[node name="BGGridContainer" type="GridContainer" parent="Inventory" unique_id=288857676]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 24
+metadata/_edit_group_ = true
+
+[node name="Panel" type="Panel" parent="Inventory/BGGridContainer" unique_id=1084410632]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel2" type="Panel" parent="Inventory/BGGridContainer" unique_id=1603975247]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel3" type="Panel" parent="Inventory/BGGridContainer" unique_id=1768707996]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel4" type="Panel" parent="Inventory/BGGridContainer" unique_id=1096801884]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel5" type="Panel" parent="Inventory/BGGridContainer" unique_id=1153548358]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel6" type="Panel" parent="Inventory/BGGridContainer" unique_id=1022648339]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel7" type="Panel" parent="Inventory/BGGridContainer" unique_id=951625743]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel8" type="Panel" parent="Inventory/BGGridContainer" unique_id=1751112849]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel9" type="Panel" parent="Inventory/BGGridContainer" unique_id=2010008047]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel10" type="Panel" parent="Inventory/BGGridContainer" unique_id=1494439193]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel11" type="Panel" parent="Inventory/BGGridContainer" unique_id=1234418274]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel12" type="Panel" parent="Inventory/BGGridContainer" unique_id=1961302313]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel13" type="Panel" parent="Inventory/BGGridContainer" unique_id=695911643]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel14" type="Panel" parent="Inventory/BGGridContainer" unique_id=1760414765]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel15" type="Panel" parent="Inventory/BGGridContainer" unique_id=571062821]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel16" type="Panel" parent="Inventory/BGGridContainer" unique_id=1042412047]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel17" type="Panel" parent="Inventory/BGGridContainer" unique_id=1663537126]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel18" type="Panel" parent="Inventory/BGGridContainer" unique_id=292055360]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel19" type="Panel" parent="Inventory/BGGridContainer" unique_id=1793287490]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel20" type="Panel" parent="Inventory/BGGridContainer" unique_id=1081176453]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel21" type="Panel" parent="Inventory/BGGridContainer" unique_id=463658259]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel22" type="Panel" parent="Inventory/BGGridContainer" unique_id=1564444331]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel23" type="Panel" parent="Inventory/BGGridContainer" unique_id=401563367]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel24" type="Panel" parent="Inventory/BGGridContainer" unique_id=1383297381]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel25" type="Panel" parent="Inventory/BGGridContainer" unique_id=1540078700]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel26" type="Panel" parent="Inventory/BGGridContainer" unique_id=388757657]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel27" type="Panel" parent="Inventory/BGGridContainer" unique_id=1565445058]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel28" type="Panel" parent="Inventory/BGGridContainer" unique_id=207295012]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel29" type="Panel" parent="Inventory/BGGridContainer" unique_id=1231521148]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel30" type="Panel" parent="Inventory/BGGridContainer" unique_id=926603749]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel31" type="Panel" parent="Inventory/BGGridContainer" unique_id=791425398]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel32" type="Panel" parent="Inventory/BGGridContainer" unique_id=672464130]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel33" type="Panel" parent="Inventory/BGGridContainer" unique_id=441837391]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel34" type="Panel" parent="Inventory/BGGridContainer" unique_id=1339078918]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel35" type="Panel" parent="Inventory/BGGridContainer" unique_id=1991120495]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel36" type="Panel" parent="Inventory/BGGridContainer" unique_id=1113427510]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel37" type="Panel" parent="Inventory/BGGridContainer" unique_id=1469561441]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel38" type="Panel" parent="Inventory/BGGridContainer" unique_id=1240488670]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel39" type="Panel" parent="Inventory/BGGridContainer" unique_id=774894308]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel40" type="Panel" parent="Inventory/BGGridContainer" unique_id=1849285627]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel41" type="Panel" parent="Inventory/BGGridContainer" unique_id=961206321]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel42" type="Panel" parent="Inventory/BGGridContainer" unique_id=1414731393]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel43" type="Panel" parent="Inventory/BGGridContainer" unique_id=1932050233]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel44" type="Panel" parent="Inventory/BGGridContainer" unique_id=1333078406]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel45" type="Panel" parent="Inventory/BGGridContainer" unique_id=1163692550]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel46" type="Panel" parent="Inventory/BGGridContainer" unique_id=357367019]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel47" type="Panel" parent="Inventory/BGGridContainer" unique_id=2106670960]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel48" type="Panel" parent="Inventory/BGGridContainer" unique_id=1914143659]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel49" type="Panel" parent="Inventory/BGGridContainer" unique_id=278264082]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel50" type="Panel" parent="Inventory/BGGridContainer" unique_id=2083633689]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel51" type="Panel" parent="Inventory/BGGridContainer" unique_id=1575534297]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel52" type="Panel" parent="Inventory/BGGridContainer" unique_id=1470284340]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel53" type="Panel" parent="Inventory/BGGridContainer" unique_id=1537754668]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel54" type="Panel" parent="Inventory/BGGridContainer" unique_id=921908006]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel55" type="Panel" parent="Inventory/BGGridContainer" unique_id=1250627791]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel56" type="Panel" parent="Inventory/BGGridContainer" unique_id=1669339633]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel57" type="Panel" parent="Inventory/BGGridContainer" unique_id=914841930]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel58" type="Panel" parent="Inventory/BGGridContainer" unique_id=74400513]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel59" type="Panel" parent="Inventory/BGGridContainer" unique_id=337937487]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel60" type="Panel" parent="Inventory/BGGridContainer" unique_id=1442205424]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel61" type="Panel" parent="Inventory/BGGridContainer" unique_id=2046275856]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel62" type="Panel" parent="Inventory/BGGridContainer" unique_id=604251966]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel63" type="Panel" parent="Inventory/BGGridContainer" unique_id=199172612]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel64" type="Panel" parent="Inventory/BGGridContainer" unique_id=1018161311]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel65" type="Panel" parent="Inventory/BGGridContainer" unique_id=1273023424]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel66" type="Panel" parent="Inventory/BGGridContainer" unique_id=563714675]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel67" type="Panel" parent="Inventory/BGGridContainer" unique_id=2075836421]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel68" type="Panel" parent="Inventory/BGGridContainer" unique_id=1655664600]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel69" type="Panel" parent="Inventory/BGGridContainer" unique_id=445342012]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel70" type="Panel" parent="Inventory/BGGridContainer" unique_id=533117240]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel71" type="Panel" parent="Inventory/BGGridContainer" unique_id=154444503]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel72" type="Panel" parent="Inventory/BGGridContainer" unique_id=1202203235]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="Inventory" unique_id=987436645]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 6
