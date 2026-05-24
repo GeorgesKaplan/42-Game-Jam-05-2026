@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://dqmkssb3t0r0h" path="res://resources/items/big_barrel.tres" id="5_p7p4d"]
 [ext_resource type="Resource" uid="uid://kqjii3uku47r" path="res://resources/items/bottles.tres" id="6_nmw2s"]
 [ext_resource type="Resource" uid="uid://kxh7nqacsek4" path="res://resources/items/tall_barrel.tres" id="7_5b77q"]
+[ext_resource type="Resource" uid="uid://cdnpr6abtikf0" path="res://resources/items/sword.tres" id="8_8585k"]
 
 [node name="Inventory" type="MarginContainer" unique_id=2063165415]
 anchors_preset = 15
@@ -182,6 +183,8 @@ columns = 12
 [node name="ItemSlot" parent="GridContainer" unique_id=95496511 instance=ExtResource("2_53id8")]
 layout_mode = 2
 item = ExtResource("3_53id8")
+is_empty = false
+is_drag_origin = true
 
 [node name="ItemSlot2" parent="GridContainer" unique_id=711931260 instance=ExtResource("2_53id8")]
 layout_mode = 2
@@ -255,6 +258,8 @@ layout_mode = 2
 [node name="ItemSlot25" parent="GridContainer" unique_id=1747106967 instance=ExtResource("2_53id8")]
 layout_mode = 2
 item = ExtResource("4_8585k")
+is_empty = false
+is_drag_origin = true
 
 [node name="ItemSlot26" parent="GridContainer" unique_id=951631565 instance=ExtResource("2_53id8")]
 layout_mode = 2
@@ -265,6 +270,8 @@ layout_mode = 2
 [node name="ItemSlot28" parent="GridContainer" unique_id=1035976352 instance=ExtResource("2_53id8")]
 layout_mode = 2
 item = ExtResource("5_p7p4d")
+is_empty = false
+is_drag_origin = true
 
 [node name="ItemSlot29" parent="GridContainer" unique_id=1430660058 instance=ExtResource("2_53id8")]
 layout_mode = 2
@@ -272,10 +279,14 @@ layout_mode = 2
 [node name="ItemSlot30" parent="GridContainer" unique_id=1187947496 instance=ExtResource("2_53id8")]
 layout_mode = 2
 item = ExtResource("6_nmw2s")
+is_empty = false
+is_drag_origin = true
 
 [node name="ItemSlot31" parent="GridContainer" unique_id=154420204 instance=ExtResource("2_53id8")]
 layout_mode = 2
 item = ExtResource("7_5b77q")
+is_empty = false
+is_drag_origin = true
 
 [node name="ItemSlot32" parent="GridContainer" unique_id=640526741 instance=ExtResource("2_53id8")]
 layout_mode = 2
@@ -291,3 +302,6 @@ layout_mode = 2
 
 [node name="ItemSlot36" parent="GridContainer" unique_id=1268011015 instance=ExtResource("2_53id8")]
 layout_mode = 2
+item = ExtResource("8_8585k")
+is_empty = false
+is_drag_origin = true

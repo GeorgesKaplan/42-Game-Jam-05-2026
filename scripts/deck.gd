@@ -8,7 +8,6 @@ const Loading: Resource = preload("uid://bsdh43ptepor8")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print_debug("WENT HERE")
 	var line:Array = inventory.grid_container.get_children()
 	for i:ItemSlot in line:
 		i.update_ui()

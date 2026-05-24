@@ -56,7 +56,7 @@ const SHAPE_DATA: Dictionary[Shape, Dictionary] = {
 		"shape_data": [	[0, 0, 0],
 						[0, 0, 0],
 						[1, 1, 0]],
-		"span": Vector2(2, 1),
+		"span": Vector2(128, 64),
 	},
 
 	Shape.SQUARE: {
@@ -77,35 +77,35 @@ const SHAPE_DATA: Dictionary[Shape, Dictionary] = {
 		"shape_data": [	[0, 0, 0],
 						[0, 0, 0],
 						[1, 1, 1]],
-		"span": Vector2(3, 1),
+		"span": Vector2(192, 64),
 	},
 
 	Shape.LVTALL: {
 		"shape_data": [	[1, 1, 0],
 						[1, 1, 0],
 						[1, 1, 0]],
-		"span": Vector2(2, 3),
+		"span": Vector2(128, 192),
 	},
 
 	Shape.LOWU: {
 		"shape_data": [	[0, 0, 0],
 						[1, 0, 1],
 						[1, 1, 1]],
-		"span": Vector2(196, 0),
+		"span": Vector2(192, 0),
 	},
 
 	Shape.WIDE: {
 		"shape_data": [	[0, 0, 0],
 						[1, 1, 1],
 						[1, 1, 1]],
-		"span": Vector2(3, 2),
+		"span": Vector2(192, 128),
 	},
 
 	Shape.LARGE: {
 		"shape_data": [	[1, 1, 1],
 						[1, 1, 1],
 						[1, 1, 1]],
-		"span": Vector2(3, 3),
+		"span": Vector2(192, 192),
 	},
 }
 

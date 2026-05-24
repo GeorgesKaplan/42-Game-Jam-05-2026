@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://duna4s52h6xgk"]
+
+[ext_resource type="Script" uid="uid://bfa760mek7xh3" path="res://resources/item_data.gd" id="1_hf80f"]
+[ext_resource type="Texture2D" uid="uid://2dfmgekibopa" path="res://resources/sprites/chest_2x2.png" id="2_hf80f"]
+
+[resource]
+script = ExtResource("1_hf80f")
+name = "chest"
+sprite = ExtResource("2_hf80f")
+shape = 3
+origin = 6
+value = 125
+metadata/_custom_type_script = "uid://bfa760mek7xh3"
