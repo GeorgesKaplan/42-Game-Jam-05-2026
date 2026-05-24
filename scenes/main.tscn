@@ -10,8 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://cdyj8nsvje345" path="res://resources/Illustration_sans_titre_1.png" id="5_trceg"]
 [ext_resource type="AudioStream" uid="uid://cup8hiruomq1t" path="res://resources/ebunny-pirate-bay-guitar-376548.mp3" id="7_o6xl0"]
 [ext_resource type="AudioStream" uid="uid://dmvuce15ep4nf" path="res://resources/Smuggler's life Water ambiance.wav" id="8_85g3d"]
+[ext_resource type="Script" uid="uid://3prhcdgmjyfs" path="res://scripts/moving_bg.gd" id="8_a8y0u"]
 [ext_resource type="AudioStream" uid="uid://wbjhwd300twg" path="res://resources/Smuggler's life harbor ambience.wav" id="9_choun"]
+[ext_resource type="Texture2D" uid="uid://cwceugc1p1ag6" path="res://resources/sprites/background.jpg" id="9_jkv2x"]
 [ext_resource type="AudioStream" uid="uid://cwkay5uopu7cx" path="res://resources/Smuggler's life Boat creaking.wav" id="10_choun"]
+[ext_resource type="Script" uid="uid://bwj5kxj3bge7l" path="res://scripts/sprite_bg.gd" id="10_jkv2x"]
 
 [node name="Main" type="Node" unique_id=1391963116]
 script = ExtResource("1_o5qli")
@@ -119,6 +122,22 @@ size_flags_vertical = 4
 text = "Continue"
 icon = ExtResource("5_trceg")
 icon_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=964821931]
+script = ExtResource("8_a8y0u")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=11108270]
+visible = false
+position = Vector2(-3772, 0)
+texture = ExtResource("9_jkv2x")
+centered = false
+script = ExtResource("10_jkv2x")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer" unique_id=232331390]
+position = Vector2(1920, 0)
+texture = ExtResource("9_jkv2x")
+centered = false
+script = ExtResource("10_jkv2x")
 
 [node name="Game" parent="." unique_id=192646751 instance=ExtResource("3_sugp2")]
 visible = false
