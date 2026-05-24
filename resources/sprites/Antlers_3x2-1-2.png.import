@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1w4nwy81qpmy"
-path="res://.godot/imported/GUN.png-e7e3df12a195249082155ba1795fa6d4.ctex"
+uid="uid://cgh33jmjwvsss"
+path="res://.godot/imported/Antlers_3x2-1-2.png-5b6edb3dfa1343931154f3768a440563.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/PLACEHOLDERS/GUN.png"
-dest_files=["res://.godot/imported/GUN.png-e7e3df12a195249082155ba1795fa6d4.ctex"]
+source_file="res://resources/sprites/Antlers_3x2-1-2.png"
+dest_files=["res://.godot/imported/Antlers_3x2-1-2.png-5b6edb3dfa1343931154f3768a440563.ctex"]
 
 [params]
 

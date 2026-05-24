@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2ohluxbgkibr"
-path="res://.godot/imported/rum.png-622367c75b68ed6e0f6f13e71fb32620.ctex"
+uid="uid://duawa0wg71rlg"
+path="res://.godot/imported/Tonneau_2x2.png-737642f1810d4f5c5f17565f2ac0e5f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/PLACEHOLDERS/rum.png"
-dest_files=["res://.godot/imported/rum.png-622367c75b68ed6e0f6f13e71fb32620.ctex"]
+source_file="res://resources/sprites/Tonneau_2x2.png"
+dest_files=["res://.godot/imported/Tonneau_2x2.png-737642f1810d4f5c5f17565f2ac0e5f4.ctex"]
 
 [params]
 
