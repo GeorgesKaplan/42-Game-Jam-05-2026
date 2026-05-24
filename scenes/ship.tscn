@@ -63,7 +63,7 @@ grow_vertical = 2
 script = ExtResource("1_4tobq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=470610508]
-position = Vector2(525, -77)
+position = Vector2(-460, -575)
 scale = Vector2(4.1141186, 4.3712964)
 sprite_frames = SubResource("SpriteFrames_83dbu")
 animation = &"Sailing"

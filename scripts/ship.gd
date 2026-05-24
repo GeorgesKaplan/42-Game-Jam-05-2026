@@ -7,6 +7,7 @@ extends Control
 @onready var cargo_inventory_down: Inventory = $CargoInventoryDown
 @onready var toilets_inventory: Inventory = $ToiletsInventory
 @onready var dormitory_inventory: Inventory = $DormitoryInventory
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 
 func _ready() -> void:
@@ -27,3 +28,5 @@ func _ready() -> void:
 	
 	dormitory_inventory.init_inventory(14, 5)
 	dormitory_inventory.resize_slots(124)
+	
+	animated_sprite_2d.play("Sailing")
