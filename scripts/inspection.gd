@@ -56,6 +56,6 @@ func inspection(start: Vector2, piece: GridContainer) -> bool:
 	return true
 
 
-func end_of_level(ship:Array[GridContainer]) -> void:
-	for i in ship:
-		inspection(Vector2(0,2), ship[i])
+#func end_of_level(ship:Array[GridContainer]) -> void:
+	#for i in ship:
+		#inspection(Vector2(0,2), ship[i])
