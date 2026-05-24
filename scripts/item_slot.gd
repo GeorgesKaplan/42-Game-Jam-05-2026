@@ -104,7 +104,7 @@ func refresh_grid_occupancy() -> void:
 			target_slot.is_empty = false
 
 func update_ui() -> void:
-	if not origin_point or not item:
+	if not is_drag_origin or not item:
 		item_icon.texture = null
 		item_icon.position = Vector2.ZERO
 		tooltip_text = ""

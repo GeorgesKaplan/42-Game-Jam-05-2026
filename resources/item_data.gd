@@ -9,6 +9,8 @@ extends Resource
 ## The point of origin where an object is grabbed, in a 3x3 matrix.
 ## Starts from the bottom left corner.
 @export var origin: GrabAnchor = GrabAnchor.MID_MID
+## Item's selling value
+@export var value: int = 1
 
 enum Shape {
 	SINGLE,	## 1x1
