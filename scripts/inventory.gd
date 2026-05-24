@@ -1,5 +1,5 @@
 class_name Inventory
-extends Panel
+extends Container
 
 # preload cursor textures
 @onready var grid_container: GridContainer = $GridContainer
