@@ -158,15 +158,14 @@ func _get_anchor() -> Vector2:
 ## A duplicate of the panel is used as the drag preview while the real icon is
 ## hidden, and the slot is marked as a temporary empty origin so placement
 ## checks can treat the moving item as lifted out of the grid.
-func _get_drag_data(_at_position: Vector2) -> Variant: #TODO: Redirect drag attempts from 'occupied' slots to occupied_by node
+func _get_drag_data(_at_position: Vector2) -> Variant:
 	if not item and not occupied_by:
 		#print_debug("Item slot ", self, " is empty")
 		#print_debug("Drag attempt at ", _at_position)
 		return
 
 	if not item and occupied_by:
-		print_debug("Slot %s belongs to %s (%s)" %[self, occupied_by, occupied_by.item.name])
-		return
+		return occupied_by._get_drag_data(_at_position)
 	
 
 	#print_debug("Node ", self, " holds texture ", item_icon.texture)
