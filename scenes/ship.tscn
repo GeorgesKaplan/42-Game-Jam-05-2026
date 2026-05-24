@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://cuoxi5nbsya1t"]
 
+[ext_resource type="Script" uid="uid://dj16rrxo6nluo" path="res://scripts/ship.gd" id="1_4tobq"]
 [ext_resource type="Texture2D" uid="uid://dvui0k0pbyjgn" path="res://resources/sprites/ship_full.png" id="1_q631a"]
+[ext_resource type="PackedScene" uid="uid://rxw7o4fkyqvc" path="res://scenes/inventory.tscn" id="3_tfsc7"]
 
 [node name="Ship" type="Control" unique_id=334103971]
 layout_mode = 3
@@ -9,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_4tobq")
 
 [node name="ShipTexture" type="TextureRect" parent="." unique_id=513917722]
 layout_mode = 1
@@ -17,11 +20,68 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -1930.0
-offset_top = -1080.0
-offset_right = 1930.0
-offset_bottom = 1080.0
+offset_left = -3682.0
+offset_top = -1975.0
+offset_right = 178.0
+offset_bottom = 185.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.25, 1.25)
+scale = Vector2(1.6, 1.6)
 texture = ExtResource("1_q631a")
+metadata/_edit_lock_ = true
+
+[node name="CabinInventory" parent="." unique_id=2063165415 instance=ExtResource("3_tfsc7")]
+layout_mode = 1
+offset_left = 1407.0
+offset_top = -240.0
+offset_right = 1266.0
+offset_bottom = -743.0
+metadata/_edit_lock_ = true
+
+[node name="KitchenInventory" parent="." unique_id=1761413965 instance=ExtResource("3_tfsc7")]
+layout_mode = 1
+offset_left = 1695.0
+offset_top = 362.0
+offset_right = 972.0
+offset_bottom = -108.0
+metadata/_edit_lock_ = true
+
+[node name="CannonsInventory" parent="." unique_id=558978835 instance=ExtResource("3_tfsc7")]
+layout_mode = 1
+offset_left = -205.0
+offset_top = 361.0
+offset_right = -308.0
+offset_bottom = -109.0
+metadata/_edit_lock_ = true
+
+[node name="CargoInventoryUp" parent="." unique_id=674992179 instance=ExtResource("3_tfsc7")]
+layout_mode = 1
+offset_left = -1619.0
+offset_top = 355.0
+offset_right = -2198.0
+offset_bottom = -291.0
+metadata/_edit_lock_ = true
+
+[node name="CargoInventoryDown" parent="." unique_id=101137276 instance=ExtResource("3_tfsc7")]
+layout_mode = 1
+offset_left = -983.0
+offset_top = 841.0
+offset_right = -2207.0
+offset_bottom = 250.0
+metadata/_edit_lock_ = true
+
+[node name="ToiletsInventory" parent="." unique_id=1557532412 instance=ExtResource("3_tfsc7")]
+layout_mode = 1
+offset_left = -222.0
+offset_top = 1015.0
+offset_right = -1592.0
+offset_bottom = 518.0
+metadata/_edit_lock_ = true
+
+[node name="DormitoryInventory" parent="." unique_id=487662064 instance=ExtResource("3_tfsc7")]
+layout_mode = 1
+offset_left = 353.0
+offset_top = 1005.0
+offset_right = 266.0
+offset_bottom = 603.0
+metadata/_edit_lock_ = true

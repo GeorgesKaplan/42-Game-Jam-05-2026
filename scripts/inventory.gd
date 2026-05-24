@@ -22,6 +22,11 @@ func init_inventory(room_len: int, room_height: int) -> void:
 			fake_slot.custom_minimum_size = Vector2(128, 128)
 			bg_grid_container.add_child(fake_slot)
 
+func resize_slots(resize_to: float) -> void:
+	var fake_slots: Array = bg_grid_container.get_children()
+	for fake_slot: Panel in fake_slots:
+		fake_slot.custom_minimum_size = Vector2(resize_to, resize_to)
+
 func _notification(what: int) -> void:
 	if what == Node.NOTIFICATION_DRAG_BEGIN:
 		#print_debug("Dragging started")
