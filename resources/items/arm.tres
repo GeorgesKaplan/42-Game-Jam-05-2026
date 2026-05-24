@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c0s6hffetxaei"]
+
+[ext_resource type="Script" uid="uid://bfa760mek7xh3" path="res://resources/item_data.gd" id="1_wn8go"]
+[ext_resource type="Texture2D" uid="uid://dp5psvuhfh0mg" path="res://resources/sprites/arm_1x2.png" id="2_ykcsh"]
+
+[resource]
+script = ExtResource("1_wn8go")
+name = "arm"
+sprite = ExtResource("2_ykcsh")
+illegal = true
+shape = 1
+origin = 6
+value = 200
+metadata/_custom_type_script = "uid://bfa760mek7xh3"

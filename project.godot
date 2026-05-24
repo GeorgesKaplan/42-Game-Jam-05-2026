@@ -40,6 +40,10 @@ window/size/viewport_height=1080
 
 ship="list of all the inventories"
 
+[global_group]
+
+ship="list of all the inventories"
+
 [input]
 
 TestProgressBar={

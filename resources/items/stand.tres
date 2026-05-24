@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://4kp6iso1py1p"]
+
+[ext_resource type="Script" uid="uid://bfa760mek7xh3" path="res://resources/item_data.gd" id="1_v3mku"]
+[ext_resource type="Texture2D" uid="uid://c4rpnj7j1yyij" path="res://resources/sprites/chevalet_2x3.png" id="2_v3mku"]
+
+[resource]
+script = ExtResource("1_v3mku")
+name = "stand"
+sprite = ExtResource("2_v3mku")
+shape = 6
+origin = 6
+value = 150
+metadata/_custom_type_script = "uid://bfa760mek7xh3"

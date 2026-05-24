@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://b6d46d3pikq20"]
+
+[ext_resource type="Script" uid="uid://bfa760mek7xh3" path="res://resources/item_data.gd" id="1_cu2vc"]
+[ext_resource type="Texture2D" uid="uid://wc88e56yb1kk" path="res://resources/sprites/GUN_1x2.png" id="2_cu2vc"]
+
+[resource]
+script = ExtResource("1_cu2vc")
+name = "gun"
+sprite = ExtResource("2_cu2vc")
+illegal = true
+shape = 2
+origin = 6
+value = 215
+metadata/_custom_type_script = "uid://bfa760mek7xh3"

@@ -1,0 +1,307 @@
+[gd_scene format=3 uid="uid://dl2c0njvy78ll"]
+
+[ext_resource type="Script" uid="uid://d12ojcv564vkm" path="res://scripts/inventory.gd" id="1_6vkgi"]
+[ext_resource type="PackedScene" uid="uid://bq6rp6yn01lh8" path="res://scenes/item_slot.tscn" id="2_53id8"]
+[ext_resource type="Resource" uid="uid://bvsdd1kejxb37" path="res://resources/items/teddy.tres" id="3_53id8"]
+[ext_resource type="Resource" uid="uid://dhai7dnhmy1dr" path="res://resources/items/antlers.tres" id="4_8585k"]
+[ext_resource type="Resource" uid="uid://dqmkssb3t0r0h" path="res://resources/items/big_barrel.tres" id="5_p7p4d"]
+[ext_resource type="Resource" uid="uid://kqjii3uku47r" path="res://resources/items/bottles.tres" id="6_nmw2s"]
+[ext_resource type="Resource" uid="uid://kxh7nqacsek4" path="res://resources/items/tall_barrel.tres" id="7_5b77q"]
+[ext_resource type="Resource" uid="uid://cdnpr6abtikf0" path="res://resources/items/sword.tres" id="8_8585k"]
+
+[node name="Inventory" type="MarginContainer" unique_id=2063165415]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+script = ExtResource("1_6vkgi")
+
+[node name="BGGridContainer" type="GridContainer" parent="." unique_id=1290958335]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 12
+metadata/_edit_group_ = true
+
+[node name="Panel" type="Panel" parent="BGGridContainer" unique_id=1661399867]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel2" type="Panel" parent="BGGridContainer" unique_id=1960528568]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel3" type="Panel" parent="BGGridContainer" unique_id=573112352]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel4" type="Panel" parent="BGGridContainer" unique_id=2088019344]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel5" type="Panel" parent="BGGridContainer" unique_id=1930228234]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel6" type="Panel" parent="BGGridContainer" unique_id=599906138]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel7" type="Panel" parent="BGGridContainer" unique_id=1398734075]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel8" type="Panel" parent="BGGridContainer" unique_id=2076077205]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel9" type="Panel" parent="BGGridContainer" unique_id=2031342658]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel10" type="Panel" parent="BGGridContainer" unique_id=1432379219]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel11" type="Panel" parent="BGGridContainer" unique_id=591821564]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel12" type="Panel" parent="BGGridContainer" unique_id=524289876]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel13" type="Panel" parent="BGGridContainer" unique_id=77615743]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel14" type="Panel" parent="BGGridContainer" unique_id=576235992]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel15" type="Panel" parent="BGGridContainer" unique_id=468564730]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel16" type="Panel" parent="BGGridContainer" unique_id=1039544222]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel17" type="Panel" parent="BGGridContainer" unique_id=1931500666]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel18" type="Panel" parent="BGGridContainer" unique_id=277712648]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel19" type="Panel" parent="BGGridContainer" unique_id=1887632593]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel20" type="Panel" parent="BGGridContainer" unique_id=861768522]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel21" type="Panel" parent="BGGridContainer" unique_id=1662518121]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel22" type="Panel" parent="BGGridContainer" unique_id=19138613]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel23" type="Panel" parent="BGGridContainer" unique_id=1245440060]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel24" type="Panel" parent="BGGridContainer" unique_id=531973787]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel25" type="Panel" parent="BGGridContainer" unique_id=425988110]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel26" type="Panel" parent="BGGridContainer" unique_id=497376757]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel27" type="Panel" parent="BGGridContainer" unique_id=619757965]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel28" type="Panel" parent="BGGridContainer" unique_id=1872877932]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel29" type="Panel" parent="BGGridContainer" unique_id=983952748]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel30" type="Panel" parent="BGGridContainer" unique_id=1174555335]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel31" type="Panel" parent="BGGridContainer" unique_id=1347486738]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel32" type="Panel" parent="BGGridContainer" unique_id=191754327]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel33" type="Panel" parent="BGGridContainer" unique_id=321484415]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel34" type="Panel" parent="BGGridContainer" unique_id=1313817073]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel35" type="Panel" parent="BGGridContainer" unique_id=2119875671]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel36" type="Panel" parent="BGGridContainer" unique_id=1766748274]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1745711909]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 12
+
+[node name="ItemSlot" parent="GridContainer" unique_id=95496511 instance=ExtResource("2_53id8")]
+layout_mode = 2
+item = ExtResource("3_53id8")
+is_empty = false
+is_drag_origin = true
+
+[node name="ItemSlot2" parent="GridContainer" unique_id=711931260 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot3" parent="GridContainer" unique_id=224254527 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot4" parent="GridContainer" unique_id=1274523062 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot5" parent="GridContainer" unique_id=1836149930 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot6" parent="GridContainer" unique_id=186781058 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot7" parent="GridContainer" unique_id=2128535939 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot8" parent="GridContainer" unique_id=114859174 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot9" parent="GridContainer" unique_id=1202361087 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot10" parent="GridContainer" unique_id=1830186849 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot11" parent="GridContainer" unique_id=1783742430 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot12" parent="GridContainer" unique_id=925292116 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot13" parent="GridContainer" unique_id=944969664 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot14" parent="GridContainer" unique_id=1108898215 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot15" parent="GridContainer" unique_id=1822510905 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot16" parent="GridContainer" unique_id=341902358 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot17" parent="GridContainer" unique_id=1006456519 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot18" parent="GridContainer" unique_id=1578345648 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot19" parent="GridContainer" unique_id=151054420 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot20" parent="GridContainer" unique_id=201038230 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot21" parent="GridContainer" unique_id=1224830907 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot22" parent="GridContainer" unique_id=262114478 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot23" parent="GridContainer" unique_id=1247519385 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot24" parent="GridContainer" unique_id=1448855417 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot25" parent="GridContainer" unique_id=1747106967 instance=ExtResource("2_53id8")]
+layout_mode = 2
+item = ExtResource("4_8585k")
+is_empty = false
+is_drag_origin = true
+
+[node name="ItemSlot26" parent="GridContainer" unique_id=951631565 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot27" parent="GridContainer" unique_id=716267012 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot28" parent="GridContainer" unique_id=1035976352 instance=ExtResource("2_53id8")]
+layout_mode = 2
+item = ExtResource("5_p7p4d")
+is_empty = false
+is_drag_origin = true
+
+[node name="ItemSlot29" parent="GridContainer" unique_id=1430660058 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot30" parent="GridContainer" unique_id=1187947496 instance=ExtResource("2_53id8")]
+layout_mode = 2
+item = ExtResource("6_nmw2s")
+is_empty = false
+is_drag_origin = true
+
+[node name="ItemSlot31" parent="GridContainer" unique_id=154420204 instance=ExtResource("2_53id8")]
+layout_mode = 2
+item = ExtResource("7_5b77q")
+is_empty = false
+is_drag_origin = true
+
+[node name="ItemSlot32" parent="GridContainer" unique_id=640526741 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot33" parent="GridContainer" unique_id=1366577747 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot34" parent="GridContainer" unique_id=2052190575 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot35" parent="GridContainer" unique_id=2026746702 instance=ExtResource("2_53id8")]
+layout_mode = 2
+
+[node name="ItemSlot36" parent="GridContainer" unique_id=1268011015 instance=ExtResource("2_53id8")]
+layout_mode = 2
+item = ExtResource("8_8585k")
+is_empty = false
+is_drag_origin = true

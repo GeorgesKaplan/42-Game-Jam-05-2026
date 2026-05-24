@@ -8,4 +8,6 @@ script = ExtResource("1_fou4e")
 name = "Big Barrel"
 sprite = ExtResource("2_eaq12")
 shape = 3
+origin = 6
+value = 120
 metadata/_custom_type_script = "uid://bfa760mek7xh3"

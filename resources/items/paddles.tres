@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bm8y4meu8n3cn"]
+
+[ext_resource type="Script" uid="uid://bfa760mek7xh3" path="res://resources/item_data.gd" id="1_ieraq"]
+[ext_resource type="Texture2D" uid="uid://c7ulclmmts0gv" path="res://resources/sprites/paddles_1x3.png" id="2_ieraq"]
+
+[resource]
+script = ExtResource("1_ieraq")
+name = "paddles"
+sprite = ExtResource("2_ieraq")
+shape = 4
+origin = 6
+value = 50
+metadata/_custom_type_script = "uid://bfa760mek7xh3"

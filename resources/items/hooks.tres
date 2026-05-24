@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ce2boe8j1hgs5"]
+
+[ext_resource type="Script" uid="uid://bfa760mek7xh3" path="res://resources/item_data.gd" id="1_dsnui"]
+[ext_resource type="Texture2D" uid="uid://bdexsabkl5dfj" path="res://resources/sprites/tonneau_de_peche_1-2x3.png" id="2_dsnui"]
+
+[resource]
+script = ExtResource("1_dsnui")
+name = "Hooks"
+sprite = ExtResource("2_dsnui")
+illegal = true
+shape = 4
+origin = 7
+value = 360
+metadata/_custom_type_script = "uid://bfa760mek7xh3"
