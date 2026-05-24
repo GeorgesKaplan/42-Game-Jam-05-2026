@@ -1,20 +1,18 @@
-[gd_scene format=3 uid="uid://c2cxgb1rha1pr"]
+[gd_scene format=3 uid="uid://0jndayifv21i"]
 
-[ext_resource type="Script" uid="uid://b8ogtp4meqe36" path="res://scripts/port.gd" id="1_4bvp8"]
-[ext_resource type="PackedScene" uid="uid://rxw7o4fkyqvc" path="res://scenes/inventory.tscn" id="1_oyquu"]
+[ext_resource type="Script" uid="uid://cbktlyt3687kt" path="res://scripts/port.gd" id="1_4bvp8"]
+[ext_resource type="PackedScene" uid="uid://rxw7o4fkyqvc" path="res://scenes/inventory.tscn" id="2_opbk4"]
 
-[node name="Port" type="ScrollContainer" unique_id=1626099902]
-custom_minimum_size = Vector2(400, 400)
-anchors_preset = 15
-anchor_right = 1.0
+[node name="Port" type="ScrollContainer" unique_id=546211940]
+custom_minimum_size = Vector2(416, 0)
+anchors_preset = 9
 anchor_bottom = 1.0
-grow_horizontal = 2
+offset_right = 40.0
 grow_vertical = 2
-size_flags_horizontal = 8
-size_flags_vertical = 3
+size_flags_horizontal = 0
 horizontal_scroll_mode = 0
-scroll_hint_mode = 2
+vertical_scroll_mode = 2
 script = ExtResource("1_4bvp8")
 
-[node name="Inventory" parent="." unique_id=1890885336 instance=ExtResource("1_oyquu")]
+[node name="Inventory" parent="." unique_id=799175012 instance=ExtResource("2_opbk4")]
 layout_mode = 2

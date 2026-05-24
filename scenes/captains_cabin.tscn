@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://biqa73mwgct8p"]
+[gd_scene format=3 uid="uid://0he83c6ro05q"]
 
-[ext_resource type="Texture2D" path="res://resources/sprites/CaptainsCabin.png" id="1_0a45g"]
-[ext_resource type="Script" path="res://scripts/captains_cabin.gd" id="1_ja6mj"]
+[ext_resource type="Texture2D" uid="uid://dj67nt6emk42g" path="res://resources/sprites/CaptainsCabin.png" id="1_0a45g"]
+[ext_resource type="Script" uid="uid://ycky8bmh5q5e" path="res://scripts/captains_cabin.gd" id="1_ja6mj"]
 [ext_resource type="PackedScene" uid="uid://rxw7o4fkyqvc" path="res://scenes/inventory.tscn" id="2_5vpi8"]
 
 [node name="CaptainsCabin" type="Control" unique_id=1045112720]

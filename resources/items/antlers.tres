@@ -8,5 +8,4 @@ script = ExtResource("1_0bfxm")
 name = "Antlers"
 sprite = ExtResource("2_do1o3")
 shape = 7
-origin = 7
 metadata/_custom_type_script = "uid://bfa760mek7xh3"
