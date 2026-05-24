@@ -2,7 +2,56 @@
 
 [ext_resource type="Script" uid="uid://dj16rrxo6nluo" path="res://scripts/ship.gd" id="1_4tobq"]
 [ext_resource type="Texture2D" uid="uid://dvui0k0pbyjgn" path="res://resources/sprites/ship_full.png" id="1_q631a"]
+[ext_resource type="Texture2D" uid="uid://wy3cwtqsaohr" path="res://resources/sprites/Sails animation sprite/Anim_Bateau_dockedd.png" id="2_03y04"]
+[ext_resource type="Texture2D" uid="uid://18v2rskg462f" path="res://resources/sprites/Sails animation sprite/Anim_Bateau-1.png" id="2_tlr80"]
+[ext_resource type="Texture2D" uid="uid://ch7hjbli8pvnp" path="res://resources/sprites/Sails animation sprite/Anim_Bateau-2.png" id="3_03y04"]
 [ext_resource type="PackedScene" uid="uid://rxw7o4fkyqvc" path="res://scenes/inventory.tscn" id="3_tfsc7"]
+[ext_resource type="Texture2D" uid="uid://dy4bns3b3ms5q" path="res://resources/sprites/Sails animation sprite/Anim_Bateau-3.png" id="4_48mkp"]
+[ext_resource type="Texture2D" uid="uid://dxcmea28prgbp" path="res://resources/sprites/Sails animation sprite/Anim_Bateau-4.png" id="5_tbq4g"]
+[ext_resource type="Texture2D" uid="uid://b2vohtvn51r4o" path="res://resources/sprites/Sails animation sprite/Anim_Bateau-5.png" id="6_mx31c"]
+[ext_resource type="Texture2D" uid="uid://81mnbf6dp20g" path="res://resources/sprites/Sails animation sprite/Anim_Bateau-6.png" id="7_fs4we"]
+[ext_resource type="Texture2D" uid="uid://btx1qo1mpc8e4" path="res://resources/sprites/Sails animation sprite/Anim_Bateau-7.png" id="8_vbj2c"]
+[ext_resource type="Texture2D" uid="uid://j21jykpskvnt" path="res://resources/sprites/Sails animation sprite/Anim_Bateau-8.png" id="9_dschd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_83dbu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_03y04")
+}],
+"loop": false,
+"name": &"Docked",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tlr80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_03y04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_48mkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tbq4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mx31c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fs4we")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vbj2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dschd")
+}],
+"loop": true,
+"name": &"Sailing",
+"speed": 5.0
+}]
 
 [node name="Ship" type="Control" unique_id=334103971]
 layout_mode = 3
@@ -12,6 +61,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4tobq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=470610508]
+position = Vector2(525, -77)
+scale = Vector2(4.1141186, 4.3712964)
+sprite_frames = SubResource("SpriteFrames_83dbu")
+animation = &"Docked"
+speed_scale = 0.5
 
 [node name="ShipTexture" type="TextureRect" parent="." unique_id=513917722]
 layout_mode = 1
