@@ -15,7 +15,7 @@ func _on_return_game_button_button_up() -> void:
 	visible = false
 
 func _on_quitfrom_pause_game_button_button_up() -> void:
-	visible = true
+	get_tree().quit()
 
 func _on_quit_game_button_pressed() -> void:
 	get_tree().quit()
