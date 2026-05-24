@@ -39,11 +39,6 @@ script = ExtResource("10_jkv2x")
 
 [node name="UI" parent="CanvasLayer" unique_id=94182512 instance=ExtResource("2_0wfyh")]
 
-[node name="popupInventory" type="MarginContainer" parent="CanvasLayer/UI" unique_id=1765839333]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="mainMenu" type="MarginContainer" parent="CanvasLayer/UI" unique_id=2019969573]
 layout_mode = 1
 anchors_preset = 15
