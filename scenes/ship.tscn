@@ -66,7 +66,8 @@ script = ExtResource("1_4tobq")
 position = Vector2(525, -77)
 scale = Vector2(4.1141186, 4.3712964)
 sprite_frames = SubResource("SpriteFrames_83dbu")
-animation = &"Docked"
+animation = &"Sailing"
+frame_progress = 0.14769626
 speed_scale = 0.5
 
 [node name="ShipTexture" type="TextureRect" parent="." unique_id=513917722]

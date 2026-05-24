@@ -22,7 +22,7 @@
 script = ExtResource("1_o5qli")
 
 [node name="background" type="CanvasLayer" parent="." unique_id=697689266]
-visible = false
+layer = -1
 script = ExtResource("8_a8y0u")
 
 [node name="Sprite2D" type="Sprite2D" parent="background" unique_id=1152288058]
@@ -837,6 +837,7 @@ stream = ExtResource("10_choun")
 
 [node name="Game" parent="." unique_id=192646751 instance=ExtResource("3_sugp2")]
 visible = false
+z_index = 4
 
 [connection signal="pressed" from="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/MarginContainer/StartGameButton" to="CanvasLayer/UI/mainMenu" method="_on_start_game_button_pressed"]
 [connection signal="button_up" from="CanvasLayer/UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer/MarginContainer/StartGame" to="CanvasLayer/UI/PauseMenu" method="_on_button_button_up"]
