@@ -158,16 +158,16 @@ func _get_anchor() -> Vector2:
 ## A duplicate of the panel is used as the drag preview while the real icon is
 ## hidden, and the slot is marked as a temporary empty origin so placement
 ## checks can treat the moving item as lifted out of the grid.
-func _get_drag_data(_at_position: Vector2) -> Variant:
+func _get_drag_data(_at_position: Vector2) -> Variant: #TODO: Redirect drag attempts from 'occupied' slots to occupied_by node
 	if not item and not occupied_by:
 		#print_debug("Item slot ", self, " is empty")
 		#print_debug("Drag attempt at ", _at_position)
 		return
 
-	#print_debug("Drag attempt at ", _at_position)
-	#if occupied_by:
-		#var go_to: Vector2 = Vector2(-occupied_by.position.x, occupied_by.position.y)
-		#warp_mouse(occupied_by.item_icon.position)
+	if not item and occupied_by:
+		print_debug("Slot %s belongs to %s (%s)" %[self, occupied_by, occupied_by.item.name])
+		return
+	
 
 	#print_debug("Node ", self, " holds texture ", item_icon.texture)
 	var item_preview: Panel = self.duplicate()
