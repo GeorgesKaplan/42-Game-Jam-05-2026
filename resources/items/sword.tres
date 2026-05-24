@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cdnpr6abtikf0"]
+
+[ext_resource type="Script" uid="uid://bfa760mek7xh3" path="res://resources/item_data.gd" id="1_otrck"]
+[ext_resource type="Texture2D" uid="uid://dyxbp267w1gr3" path="res://resources/sprites/sabre_1x2.png" id="2_otrck"]
+
+[resource]
+script = ExtResource("1_otrck")
+name = "Sword"
+sprite = ExtResource("2_otrck")
+illegal = true
+shape = 1
+origin = 6
+value = 190
+metadata/_custom_type_script = "uid://bfa760mek7xh3"

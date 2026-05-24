@@ -12,7 +12,7 @@ extends Panel
 @export var is_wall: bool = false
 ## Defines if the slot is available or not.
 ## Must be set to false when slot is filled and true when emptied.
-var is_empty: bool = true
+@export var is_empty: bool = true
 ## tells inspector if this panel has already been checked
 var is_checked: bool = false
 ## The origin slot of the item currently covering this cell.
@@ -20,7 +20,7 @@ var occupied_by: ItemSlot = null
 ## The item currently covering this cell, whether this slot is the origin or not.
 var occupying_item: ItemData = null
 ## Marks the origin slot temporarily ignored while its item is being dragged.
-var is_drag_origin: bool = false
+@export var is_drag_origin: bool = false
 
 ## Initializes both the logical occupancy map and the visible icon state.
 ## This keeps the slot consistent whether it starts empty, contains an item,
@@ -138,7 +138,7 @@ func update_ui() -> void:
 		item_icon.position = Vector2.ZERO
 		tooltip_text = ""
 		return
-
+	#print_debug("WENT HERE")
 	item_icon.texture = item.sprite
 	# The icon is shifted so multi-cell shapes line up visually with the slot
 	# acting as the anchor/origin for placement.

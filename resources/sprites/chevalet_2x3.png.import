@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnim4e2mppshc"
-path="res://.godot/imported/rum.png-9260ce4a4db5ea0d441928e8170c99c4.ctex"
+uid="uid://c4rpnj7j1yyij"
+path="res://.godot/imported/chevalet_2x3.png-264bbf1ae8c44f506715949582a661b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/sprites/rum.png"
-dest_files=["res://.godot/imported/rum.png-9260ce4a4db5ea0d441928e8170c99c4.ctex"]
+source_file="res://resources/sprites/chevalet_2x3.png"
+dest_files=["res://.godot/imported/chevalet_2x3.png-264bbf1ae8c44f506715949582a661b0.ctex"]
 
 [params]
 
