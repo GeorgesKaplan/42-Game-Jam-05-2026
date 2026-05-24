@@ -10,13 +10,30 @@
 [ext_resource type="Texture2D" uid="uid://cdyj8nsvje345" path="res://resources/Illustration_sans_titre_1.png" id="5_trceg"]
 [ext_resource type="AudioStream" uid="uid://cup8hiruomq1t" path="res://resources/ebunny-pirate-bay-guitar-376548.mp3" id="7_o6xl0"]
 [ext_resource type="AudioStream" uid="uid://dmvuce15ep4nf" path="res://resources/Smuggler's life Water ambiance.wav" id="8_85g3d"]
+[ext_resource type="Script" uid="uid://3prhcdgmjyfs" path="res://scripts/moving_bg.gd" id="8_a8y0u"]
 [ext_resource type="Script" uid="uid://d12ojcv564vkm" path="res://scripts/inventory.gd" id="9_a8y0u"]
 [ext_resource type="AudioStream" uid="uid://wbjhwd300twg" path="res://resources/Smuggler's life harbor ambience.wav" id="9_choun"]
 [ext_resource type="PackedScene" uid="uid://bq6rp6yn01lh8" path="res://scenes/item_slot.tscn" id="9_jkv2x"]
 [ext_resource type="AudioStream" uid="uid://cwkay5uopu7cx" path="res://resources/Smuggler's life Boat creaking.wav" id="10_choun"]
+[ext_resource type="Script" uid="uid://bwj5kxj3bge7l" path="res://scripts/sprite_bg.gd" id="10_jkv2x"]
+[ext_resource type="Texture2D" uid="uid://cwceugc1p1ag6" path="res://resources/sprites/background.jpg" id="15_muem4"]
 
 [node name="Main" type="Node" unique_id=1391963116]
 script = ExtResource("1_o5qli")
+
+[node name="background" type="CanvasLayer" parent="." unique_id=697689266]
+visible = false
+script = ExtResource("8_a8y0u")
+
+[node name="Sprite2D" type="Sprite2D" parent="background" unique_id=1152288058]
+position = Vector2(-926, 540)
+texture = ExtResource("15_muem4")
+script = ExtResource("10_jkv2x")
+
+[node name="Sprite2D2" type="Sprite2D" parent="background" unique_id=579918881]
+position = Vector2(4766, 540)
+texture = ExtResource("15_muem4")
+script = ExtResource("10_jkv2x")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=208941654]
 
@@ -115,7 +132,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Button" type="Button" parent="CanvasLayer/UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer/MarginContainer" unique_id=642101658]
+[node name="StartGame" type="Button" parent="CanvasLayer/UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer/MarginContainer" unique_id=642101658]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -125,6 +142,7 @@ icon = ExtResource("5_trceg")
 icon_alignment = 1
 
 [node name="Deck" type="ScrollContainer" parent="CanvasLayer/UI" unique_id=1193058334]
+visible = false
 layout_mode = 1
 offset_right = 806.0
 offset_bottom = 815.0
@@ -588,291 +606,219 @@ theme_override_constants/v_separation = 5
 columns = 12
 
 [node name="ItemSlot" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=95496511 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot2" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1842304956 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot3" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=741120854 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot4" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1641201745 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot5" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=794471998 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot6" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1065631202 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot7" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1933916636 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot8" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1141667676 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot9" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1001481840 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot10" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=444294946 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot11" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1299886184 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot12" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=281697801 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot13" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=679505320 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot14" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1017918522 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot15" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=32262984 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot16" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1354293300 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot17" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1074175596 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot18" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=734412294 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot19" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1172583513 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot20" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1437124126 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot21" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1117923856 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot22" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=115728162 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot23" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=2048690164 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot24" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1238008545 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot25" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=830630338 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot26" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1688560169 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot27" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=161233885 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot28" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1304132898 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot29" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1745720140 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot30" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=574117270 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot31" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=278092215 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot32" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=436875003 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot33" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=187912292 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot34" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1707833900 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot35" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1720388609 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot36" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=9463995 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot37" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1307914320 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot38" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1436795030 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot39" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1155999354 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot40" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=839196844 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot41" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=708807614 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot42" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=200276160 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot43" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1368961453 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot44" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1342283575 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot45" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=2047241470 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot46" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=2076568755 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot47" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=791829611 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot48" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=636039592 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot49" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=415759673 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot50" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=505867328 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot51" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=405079775 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot52" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=670158229 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot53" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=2049641932 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot54" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=984580411 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot55" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=362238995 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot56" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=650977407 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot57" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=2017746959 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot58" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=534310495 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot59" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1706710889 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot60" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=70853142 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot61" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=472764973 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot62" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1712192988 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot63" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=208896076 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot64" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=2067329539 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot65" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=795635742 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot66" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1297856982 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot67" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1139488336 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot68" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=642202479 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot69" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=530308664 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot70" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=2009491355 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot71" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1671490952 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="ItemSlot72" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=614714262 instance=ExtResource("9_jkv2x")]
-custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=404405370]
@@ -893,4 +839,4 @@ stream = ExtResource("10_choun")
 visible = false
 
 [connection signal="pressed" from="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/MarginContainer/StartGameButton" to="CanvasLayer/UI/mainMenu" method="_on_start_game_button_pressed"]
-[connection signal="button_up" from="CanvasLayer/UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer/MarginContainer/Button" to="CanvasLayer/UI/PauseMenu" method="_on_button_button_up"]
+[connection signal="button_up" from="CanvasLayer/UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer/MarginContainer/StartGame" to="CanvasLayer/UI/PauseMenu" method="_on_button_button_up"]

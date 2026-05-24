@@ -12,7 +12,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if sprite_2d.position.x >= 1920:
+	if sprite_2d.position.x >= 4766:
 		sprite_2d.position.x = sprite_2d_2.position.x - 5692
-	elif sprite_2d_2.position.x >= 1920:
+	elif sprite_2d_2.position.x >= 4766:
 		sprite_2d_2.position.x = sprite_2d.position.x - 5692
