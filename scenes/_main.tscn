@@ -6,23 +6,46 @@
 [ext_resource type="PackedScene" uid="uid://ckn72dfdxu671" path="res://scenes/game.tscn" id="3_sugp2"]
 [ext_resource type="Texture2D" uid="uid://0l4nlwcre06g" path="res://resources/Illustration_sans_titre.png" id="4_eb6dy"]
 [ext_resource type="Script" uid="uid://c8tlgrf87xjsf" path="res://scenes/start_game_button.gd" id="4_tbgi4"]
-[ext_resource type="Texture2D" uid="uid://dyjtitqf8f6eb" path="res://resources/logo_wip.png" id="5_a8y0u"]
 [ext_resource type="Script" uid="uid://b4ini8n3mkuen" path="res://scenes/pause_menu.gd" id="5_tefeu"]
 [ext_resource type="Texture2D" uid="uid://cdyj8nsvje345" path="res://resources/Illustration_sans_titre_1.png" id="5_trceg"]
-[ext_resource type="FontFile" uid="uid://ci0dqhtsr5fyc" path="res://resources/king_of_pirate/KING OF PIRATE.otf" id="6_a8y0u"]
 [ext_resource type="AudioStream" uid="uid://cup8hiruomq1t" path="res://resources/ebunny-pirate-bay-guitar-376548.mp3" id="7_o6xl0"]
 [ext_resource type="AudioStream" uid="uid://dmvuce15ep4nf" path="res://resources/Smuggler's life Water ambiance.wav" id="8_85g3d"]
+[ext_resource type="Script" uid="uid://3prhcdgmjyfs" path="res://scripts/moving_bg.gd" id="8_a8y0u"]
+[ext_resource type="Texture2D" uid="uid://bdc70rigjgs0k" path="res://resources/Logo_final_petit.png" id="8_pm3ni"]
+[ext_resource type="Script" uid="uid://d12ojcv564vkm" path="res://scripts/inventory.gd" id="9_a8y0u"]
 [ext_resource type="AudioStream" uid="uid://wbjhwd300twg" path="res://resources/Smuggler's life harbor ambience.wav" id="9_choun"]
-[ext_resource type="Script" uid="uid://7uvrk2gyv73o" path="res://scenes/popup_messageMM.gd" id="9_jbj1t"]
-[ext_resource type="Script" uid="uid://dwdp72x1aurpf" path="res://scenes/popup_message.gd" id="9_jkv2x"]
+[ext_resource type="FontFile" uid="uid://bwvxy4mwkjpqg" path="res://resources/king_of_pirate/KING OF PIRATE.otf" id="9_gqmmt"]
+[ext_resource type="PackedScene" uid="uid://bq6rp6yn01lh8" path="res://scenes/item_slot.tscn" id="9_jkv2x"]
 [ext_resource type="AudioStream" uid="uid://cwkay5uopu7cx" path="res://resources/Smuggler's life Boat creaking.wav" id="10_choun"]
+[ext_resource type="Script" uid="uid://bwj5kxj3bge7l" path="res://scripts/sprite_bg.gd" id="10_jkv2x"]
+[ext_resource type="Script" uid="uid://dpir500vvumu0" path="res://scenes/instruction_button.gd" id="12_y6deb"]
+[ext_resource type="Script" uid="uid://cdyixsho7xj77" path="res://scenes/popup_messageMM.gd" id="12_yc10j"]
+[ext_resource type="Script" uid="uid://s6yxg8dajx0j" path="res://scenes/popup_message.gd" id="14_jscy8"]
+[ext_resource type="Script" uid="uid://dus4tnlyxdxkx" path="res://scenes/instruction_message.gd" id="14_og1vs"]
+[ext_resource type="Texture2D" uid="uid://cwceugc1p1ag6" path="res://resources/sprites/background.jpg" id="15_muem4"]
 
 [node name="Main" type="Node" unique_id=1391963116]
 script = ExtResource("1_o5qli")
 
-[node name="UI" parent="." unique_id=94182512 instance=ExtResource("2_0wfyh")]
+[node name="background" type="CanvasLayer" parent="." unique_id=697689266]
+layer = -1
+script = ExtResource("8_a8y0u")
 
-[node name="mainMenu" type="MarginContainer" parent="UI" unique_id=2019969573]
+[node name="Sprite2D" type="Sprite2D" parent="background" unique_id=1152288058]
+position = Vector2(-926, 540)
+texture = ExtResource("15_muem4")
+script = ExtResource("10_jkv2x")
+
+[node name="Sprite2D2" type="Sprite2D" parent="background" unique_id=579918881]
+position = Vector2(4766, 540)
+texture = ExtResource("15_muem4")
+script = ExtResource("10_jkv2x")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=208941654]
+
+[node name="UI" parent="CanvasLayer" unique_id=94182512 instance=ExtResource("2_0wfyh")]
+
+[node name="mainMenu" type="MarginContainer" parent="CanvasLayer/UI" unique_id=217821540]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,51 +54,47 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_jyhfs")
 
-[node name="MenuBoard" type="MarginContainer" parent="UI/mainMenu" unique_id=1931784199]
+[node name="MenuBoard" type="MarginContainer" parent="CanvasLayer/UI/mainMenu" unique_id=1298127280]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="NinePatchRect" type="NinePatchRect" parent="UI/mainMenu/MenuBoard" unique_id=1985009824]
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/UI/mainMenu/MenuBoard" unique_id=2136744497]
 custom_minimum_size = Vector2(400, 500)
 layout_mode = 2
 texture = ExtResource("4_eb6dy")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/mainMenu/MenuBoard/NinePatchRect" unique_id=907260526]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect" unique_id=498592180]
 layout_mode = 0
 offset_right = 400.0
 offset_bottom = 500.0
 
-[node name="Seperator" type="Control" parent="UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer" unique_id=1126290487]
+[node name="Seperator" type="Control" parent="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer" unique_id=2005810346]
 custom_minimum_size = Vector2(0, 18)
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer" unique_id=1084066326]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer" unique_id=1206315785]
 layout_mode = 2
 
-[node name="Seperator" type="MarginContainer" parent="UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/HBoxContainer" unique_id=1026166189]
+[node name="Seperator" type="MarginContainer" parent="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/HBoxContainer" unique_id=1969264716]
 custom_minimum_size = Vector2(18, 0)
 layout_mode = 2
 
-[node name="Logo" type="NinePatchRect" parent="UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/HBoxContainer" unique_id=139453297]
+[node name="Logo" type="NinePatchRect" parent="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/HBoxContainer" unique_id=1916192326]
 custom_minimum_size = Vector2(360, 274)
 layout_mode = 2
-texture = ExtResource("5_a8y0u")
+texture = ExtResource("8_pm3ni")
 
-[node name="Seperator2" type="Control" parent="UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer" unique_id=1165427546]
-custom_minimum_size = Vector2(0, 40)
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer" unique_id=435815374]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer" unique_id=1272567474]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="StartGameButton" type="Button" parent="UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/MarginContainer" unique_id=224258491]
+[node name="StartGameButton" type="Button" parent="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/MarginContainer" unique_id=1653091549]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.5076884, 0.96891636, 0.91418785, 1)
-theme_override_fonts/font = ExtResource("6_a8y0u")
+theme_override_fonts/font = ExtResource("9_gqmmt")
 theme_override_font_sizes/font_size = 32
 text = "Start Game"
 icon = ExtResource("5_trceg")
@@ -83,14 +102,29 @@ flat = true
 icon_alignment = 1
 script = ExtResource("4_tbgi4")
 
-[node name="MarginContainer2" type="MarginContainer" parent="UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer" unique_id=1266898526]
+[node name="MarginContainer3" type="MarginContainer" parent="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer" unique_id=1582647804]
 layout_mode = 2
 
-[node name="QuitGameButton" type="Button" parent="UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/MarginContainer2" unique_id=2065736751]
+[node name="InstructionButton" type="Button" parent="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/MarginContainer3" unique_id=505789349]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.5076884, 0.96891636, 0.91418785, 1)
-theme_override_fonts/font = ExtResource("6_a8y0u")
+theme_override_fonts/font = ExtResource("9_gqmmt")
+theme_override_font_sizes/font_size = 32
+text = "Instruction "
+icon = ExtResource("5_trceg")
+flat = true
+icon_alignment = 1
+script = ExtResource("12_y6deb")
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer" unique_id=1298230279]
+layout_mode = 2
+
+[node name="QuitGameButton" type="Button" parent="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/MarginContainer2" unique_id=846352907]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5076884, 0.96891636, 0.91418785, 1)
+theme_override_fonts/font = ExtResource("9_gqmmt")
 theme_override_font_sizes/font_size = 32
 text = "Quit Game"
 icon = ExtResource("5_trceg")
@@ -98,49 +132,50 @@ flat = true
 icon_alignment = 1
 script = ExtResource("4_tbgi4")
 
-[node name="PopupMessage" type="MarginContainer" parent="UI/mainMenu" unique_id=1587008059]
+[node name="PopupMessage" type="MarginContainer" parent="CanvasLayer/UI/mainMenu" unique_id=1423895230]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("9_jbj1t")
+script = ExtResource("12_yc10j")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="UI/mainMenu/PopupMessage" unique_id=415988512]
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/UI/mainMenu/PopupMessage" unique_id=1930181032]
 custom_minimum_size = Vector2(400, 500)
 layout_mode = 2
 texture = ExtResource("4_eb6dy")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/mainMenu/PopupMessage/NinePatchRect" unique_id=1489001571]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/mainMenu/PopupMessage/NinePatchRect" unique_id=1148218230]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Seperator" type="Control" parent="UI/mainMenu/PopupMessage/NinePatchRect/VBoxContainer" unique_id=938701587]
+[node name="Seperator" type="Control" parent="CanvasLayer/UI/mainMenu/PopupMessage/NinePatchRect/VBoxContainer" unique_id=1213294769]
 custom_minimum_size = Vector2(0, 38)
 layout_mode = 2
 
-[node name="Label" type="Label" parent="UI/mainMenu/PopupMessage/NinePatchRect/VBoxContainer" unique_id=1791186373]
+[node name="Label" type="Label" parent="CanvasLayer/UI/mainMenu/PopupMessage/NinePatchRect/VBoxContainer" unique_id=631142457]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("6_a8y0u")
+theme_override_fonts/font = ExtResource("9_gqmmt")
 theme_override_font_sizes/font_size = 48
 text = "Careful
 Quitting the game will not save your data"
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="Seperator2" type="Control" parent="UI/mainMenu/PopupMessage/NinePatchRect/VBoxContainer" unique_id=1627341735]
+[node name="Seperator2" type="Control" parent="CanvasLayer/UI/mainMenu/PopupMessage/NinePatchRect/VBoxContainer" unique_id=2130303979]
 custom_minimum_size = Vector2(0, 97)
 layout_mode = 2
 
-[node name="MarginContainer2" type="MarginContainer" parent="UI/mainMenu/PopupMessage/NinePatchRect/VBoxContainer" unique_id=1403720766]
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/UI/mainMenu/PopupMessage/NinePatchRect/VBoxContainer" unique_id=1923804857]
 layout_mode = 2
 
-[node name="ReturnGameButton" type="Button" parent="UI/mainMenu/PopupMessage/NinePatchRect/VBoxContainer/MarginContainer2" unique_id=1416204207]
+[node name="ReturnGameButton" type="Button" parent="CanvasLayer/UI/mainMenu/PopupMessage/NinePatchRect/VBoxContainer/MarginContainer2" unique_id=2045068928]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.5076884, 0.96891636, 0.91418785, 1)
-theme_override_fonts/font = ExtResource("6_a8y0u")
+theme_override_fonts/font = ExtResource("9_gqmmt")
 theme_override_font_sizes/font_size = 32
 text = "Return"
 icon = ExtResource("5_trceg")
@@ -148,14 +183,14 @@ flat = true
 icon_alignment = 1
 script = ExtResource("4_tbgi4")
 
-[node name="MarginContainer3" type="MarginContainer" parent="UI/mainMenu/PopupMessage/NinePatchRect/VBoxContainer" unique_id=1576763730]
+[node name="MarginContainer3" type="MarginContainer" parent="CanvasLayer/UI/mainMenu/PopupMessage/NinePatchRect/VBoxContainer" unique_id=1845360083]
 layout_mode = 2
 
-[node name="QuitGameButton" type="Button" parent="UI/mainMenu/PopupMessage/NinePatchRect/VBoxContainer/MarginContainer3" unique_id=1333973702]
+[node name="QuitGameButton" type="Button" parent="CanvasLayer/UI/mainMenu/PopupMessage/NinePatchRect/VBoxContainer/MarginContainer3" unique_id=1848797365]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.5076884, 0.96891636, 0.91418785, 1)
-theme_override_fonts/font = ExtResource("6_a8y0u")
+theme_override_fonts/font = ExtResource("9_gqmmt")
 theme_override_font_sizes/font_size = 32
 text = "Quit Game"
 icon = ExtResource("5_trceg")
@@ -163,7 +198,67 @@ flat = true
 icon_alignment = 1
 script = ExtResource("4_tbgi4")
 
-[node name="PauseMenu" type="MarginContainer" parent="UI" unique_id=1919241987]
+[node name="InstructionMessage" type="MarginContainer" parent="CanvasLayer/UI/mainMenu" unique_id=1567079621]
+custom_minimum_size = Vector2(400, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("14_og1vs")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/UI/mainMenu/InstructionMessage" unique_id=1448735086]
+layout_mode = 2
+texture = ExtResource("4_eb6dy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/mainMenu/InstructionMessage/NinePatchRect" unique_id=419902591]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SeperatorTopInstruct" type="MarginContainer" parent="CanvasLayer/UI/mainMenu/InstructionMessage/NinePatchRect/VBoxContainer" unique_id=496709458]
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/mainMenu/InstructionMessage/NinePatchRect/VBoxContainer" unique_id=1676753865]
+layout_mode = 2
+
+[node name="SeperatorLeftInstruct" type="MarginContainer" parent="CanvasLayer/UI/mainMenu/InstructionMessage/NinePatchRect/VBoxContainer/HBoxContainer" unique_id=118872633]
+custom_minimum_size = Vector2(18, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/UI/mainMenu/InstructionMessage/NinePatchRect/VBoxContainer/HBoxContainer" unique_id=809510792]
+custom_minimum_size = Vector2(364, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_gqmmt")
+theme_override_font_sizes/font_size = 28
+text = "Click and Drag the items out of your Inventory on the left and place them in your ship in a way that hides the illegal merchandise, in time for your arrivial at the harbour.
+The inspector will check you don't have any illegal cargo, don't let him find it.
+
+Mouse Wheel to Zoom
+Right Click to Pan"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="MoreSeperator" type="MarginContainer" parent="CanvasLayer/UI/mainMenu/InstructionMessage/NinePatchRect/VBoxContainer" unique_id=229475300]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/UI/mainMenu/InstructionMessage/NinePatchRect/VBoxContainer" unique_id=887255593]
+layout_mode = 2
+
+[node name="ReturnButton" type="Button" parent="CanvasLayer/UI/mainMenu/InstructionMessage/NinePatchRect/VBoxContainer/MarginContainer2" unique_id=174496096]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5076884, 0.96891636, 0.91418785, 1)
+theme_override_fonts/font = ExtResource("9_gqmmt")
+theme_override_font_sizes/font_size = 32
+text = "Return"
+icon = ExtResource("5_trceg")
+flat = true
+icon_alignment = 1
+
+[node name="PauseMenu" type="MarginContainer" parent="CanvasLayer/UI" unique_id=1076864500]
+visible = false
+z_index = 20
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -172,17 +267,18 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5_tefeu")
 
-[node name="PauseMenuBoard" type="MarginContainer" parent="UI/PauseMenu" unique_id=1984902620]
+[node name="PauseMenuBoard" type="MarginContainer" parent="CanvasLayer/UI/PauseMenu" unique_id=1529253176]
+custom_minimum_size = Vector2(1920, 1080)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="NinePatchRect" type="NinePatchRect" parent="UI/PauseMenu/PauseMenuBoard" unique_id=653327285]
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/UI/PauseMenu/PauseMenuBoard" unique_id=156566218]
 custom_minimum_size = Vector2(800, 600)
 layout_mode = 2
 texture = ExtResource("4_eb6dy")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/PauseMenu/PauseMenuBoard/NinePatchRect" unique_id=451091029]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/PauseMenu/PauseMenuBoard/NinePatchRect" unique_id=1156683179]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -190,47 +286,47 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Seperator2" type="MarginContainer" parent="UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer" unique_id=1333934861]
+[node name="Seperator2" type="MarginContainer" parent="CanvasLayer/UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer" unique_id=2085032220]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 
-[node name="Label" type="Label" parent="UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer" unique_id=2084994941]
+[node name="Label" type="Label" parent="CanvasLayer/UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer" unique_id=1035117087]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("6_a8y0u")
+theme_override_fonts/font = ExtResource("9_gqmmt")
 theme_override_font_sizes/font_size = 128
 text = "PAUSE"
 horizontal_alignment = 1
 
-[node name="Seperator" type="Control" parent="UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer" unique_id=38170431]
+[node name="Seperator" type="Control" parent="CanvasLayer/UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer" unique_id=1096142082]
 custom_minimum_size = Vector2(0, 130)
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer" unique_id=533238491]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer" unique_id=180315295]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Button" type="Button" parent="UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer/MarginContainer" unique_id=642101658]
+[node name="Button" type="Button" parent="CanvasLayer/UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer/MarginContainer" unique_id=1511782095]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_colors/font_color = Color(0.5058824, 0.96862745, 0.9137255, 1)
-theme_override_fonts/font = ExtResource("6_a8y0u")
+theme_override_fonts/font = ExtResource("9_gqmmt")
 theme_override_font_sizes/font_size = 32
 text = "Continue"
 icon = ExtResource("5_trceg")
 flat = true
 icon_alignment = 1
 
-[node name="MarginContainer2" type="MarginContainer" parent="UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer" unique_id=878408953]
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer" unique_id=1758164571]
 layout_mode = 2
 
-[node name="QuitfromPauseGameButton" type="Button" parent="UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer/MarginContainer2" unique_id=964091923]
+[node name="QuitfromPauseGameButton" type="Button" parent="CanvasLayer/UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer/MarginContainer2" unique_id=368816173]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.5076884, 0.96891636, 0.91418785, 1)
-theme_override_fonts/font = ExtResource("6_a8y0u")
+theme_override_fonts/font = ExtResource("9_gqmmt")
 theme_override_font_sizes/font_size = 32
 text = "Quit Game"
 icon = ExtResource("5_trceg")
@@ -238,49 +334,49 @@ flat = true
 icon_alignment = 1
 script = ExtResource("4_tbgi4")
 
-[node name="PopupMessage" type="MarginContainer" parent="UI/PauseMenu" unique_id=576773461]
+[node name="PopupMessage" type="MarginContainer" parent="CanvasLayer/UI/PauseMenu" unique_id=1054254734]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("9_jkv2x")
+script = ExtResource("14_jscy8")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="UI/PauseMenu/PopupMessage" unique_id=688121765]
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/UI/PauseMenu/PopupMessage" unique_id=675441232]
 custom_minimum_size = Vector2(400, 500)
 layout_mode = 2
 texture = ExtResource("4_eb6dy")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/PauseMenu/PopupMessage/NinePatchRect" unique_id=111193931]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/PauseMenu/PopupMessage/NinePatchRect" unique_id=1026323574]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Seperator" type="Control" parent="UI/PauseMenu/PopupMessage/NinePatchRect/VBoxContainer" unique_id=907464276]
+[node name="Seperator" type="Control" parent="CanvasLayer/UI/PauseMenu/PopupMessage/NinePatchRect/VBoxContainer" unique_id=846410921]
 custom_minimum_size = Vector2(0, 38)
 layout_mode = 2
 
-[node name="Label" type="Label" parent="UI/PauseMenu/PopupMessage/NinePatchRect/VBoxContainer" unique_id=1845758355]
+[node name="Label" type="Label" parent="CanvasLayer/UI/PauseMenu/PopupMessage/NinePatchRect/VBoxContainer" unique_id=1903901832]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("6_a8y0u")
+theme_override_fonts/font = ExtResource("9_gqmmt")
 theme_override_font_sizes/font_size = 48
 text = "Careful
 Quitting the game will not save your data"
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="Seperator2" type="Control" parent="UI/PauseMenu/PopupMessage/NinePatchRect/VBoxContainer" unique_id=1067947169]
+[node name="Seperator2" type="Control" parent="CanvasLayer/UI/PauseMenu/PopupMessage/NinePatchRect/VBoxContainer" unique_id=528963519]
 custom_minimum_size = Vector2(0, 97)
 layout_mode = 2
 
-[node name="MarginContainer2" type="MarginContainer" parent="UI/PauseMenu/PopupMessage/NinePatchRect/VBoxContainer" unique_id=49462885]
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/UI/PauseMenu/PopupMessage/NinePatchRect/VBoxContainer" unique_id=129865422]
 layout_mode = 2
 
-[node name="ReturnGameButton" type="Button" parent="UI/PauseMenu/PopupMessage/NinePatchRect/VBoxContainer/MarginContainer2" unique_id=1822363158]
+[node name="ReturnGameButton" type="Button" parent="CanvasLayer/UI/PauseMenu/PopupMessage/NinePatchRect/VBoxContainer/MarginContainer2" unique_id=398028573]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.5076884, 0.96891636, 0.91418785, 1)
-theme_override_fonts/font = ExtResource("6_a8y0u")
+theme_override_fonts/font = ExtResource("9_gqmmt")
 theme_override_font_sizes/font_size = 32
 text = "Return"
 icon = ExtResource("5_trceg")
@@ -288,14 +384,14 @@ flat = true
 icon_alignment = 1
 script = ExtResource("4_tbgi4")
 
-[node name="MarginContainer3" type="MarginContainer" parent="UI/PauseMenu/PopupMessage/NinePatchRect/VBoxContainer" unique_id=1295950426]
+[node name="MarginContainer3" type="MarginContainer" parent="CanvasLayer/UI/PauseMenu/PopupMessage/NinePatchRect/VBoxContainer" unique_id=322775282]
 layout_mode = 2
 
-[node name="QuitGameButton2" type="Button" parent="UI/PauseMenu/PopupMessage/NinePatchRect/VBoxContainer/MarginContainer3" unique_id=1605170411]
+[node name="QuitGameButton2" type="Button" parent="CanvasLayer/UI/PauseMenu/PopupMessage/NinePatchRect/VBoxContainer/MarginContainer3" unique_id=2110486700]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.5076884, 0.96891636, 0.91418785, 1)
-theme_override_fonts/font = ExtResource("6_a8y0u")
+theme_override_fonts/font = ExtResource("9_gqmmt")
 theme_override_font_sizes/font_size = 32
 text = "Quit Game"
 icon = ExtResource("5_trceg")
@@ -303,8 +399,685 @@ flat = true
 icon_alignment = 1
 script = ExtResource("4_tbgi4")
 
-[node name="Game" parent="." unique_id=192646751 instance=ExtResource("3_sugp2")]
+[node name="Deck" type="ScrollContainer" parent="CanvasLayer/UI" unique_id=1193058334]
 visible = false
+layout_mode = 1
+offset_right = 806.0
+offset_bottom = 815.0
+
+[node name="Inventory" type="MarginContainer" parent="CanvasLayer/UI/Deck" unique_id=1690868856]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+script = ExtResource("9_a8y0u")
+
+[node name="BGGridContainer" type="GridContainer" parent="CanvasLayer/UI/Deck/Inventory" unique_id=1994672388]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 0
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 18
+
+[node name="Panel" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=2142110281]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel2" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=221515241]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel3" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1278862904]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel4" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1729367133]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel5" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=544814327]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel6" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=444497532]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel7" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1539785668]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel8" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=131032362]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel9" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1374015285]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel10" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1688102415]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel11" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=33699341]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel12" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=397738889]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel13" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=373634550]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel14" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1349495299]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel15" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1598999809]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel16" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=281621289]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel17" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=2009712531]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel18" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1380812803]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel19" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1396515074]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel20" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=325173171]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel21" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1910713456]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel22" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=503052343]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel23" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=812734627]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel24" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=277746570]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel25" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=138480784]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel26" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1695187774]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel27" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=726312169]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel28" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=711795336]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel29" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=419387027]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel30" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1665361144]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel31" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=2135484985]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel32" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=620604749]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel33" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1484470958]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel34" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1151176437]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel35" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=250224563]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel36" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1941707502]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel37" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=560056255]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel38" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1552768929]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel39" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1271333389]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel40" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1961562013]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel41" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=819852567]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel42" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=303527704]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel43" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=145983102]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel44" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=542267404]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel45" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1225744586]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel46" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1451266878]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel47" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=509601642]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel48" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=686649226]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel49" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1272427020]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel50" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=120156742]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel51" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=737777182]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel52" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=2056745391]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel53" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=739741089]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel54" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1014735497]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel55" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1398075186]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel56" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1523245192]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel57" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1027513896]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel58" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1640715323]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel59" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=486050651]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel60" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=484440172]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel61" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=685781738]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel62" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1966451205]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel63" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=712774748]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel64" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1352817935]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel65" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=164022812]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel66" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1349583142]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel67" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1046834312]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel68" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=303823076]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel69" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1976932509]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel70" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=968478359]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel71" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1885639671]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel72" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1506601382]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel73" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=216254504]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel74" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1420211205]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel75" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1965962821]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel76" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1028637569]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel77" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1551285475]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel78" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=46526049]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel79" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1347275917]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel80" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=301622328]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel81" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=599378741]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel82" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1142641797]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel83" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=2054358452]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel84" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1623985614]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel85" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1991536876]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel86" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1988240494]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel87" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1325249616]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel88" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1918804310]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel89" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1903888825]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel90" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=546391593]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel91" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=505347076]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel92" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=111644345]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel93" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=599686312]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel94" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1763464332]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel95" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1268837374]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel96" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=33894184]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel97" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1550871685]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel98" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=264036799]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel99" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=201973310]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel100" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1395598778]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel101" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1171607183]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel102" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=319232374]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel103" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1830886435]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel104" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=808955019]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel105" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=17736221]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel106" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=326650436]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel107" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1140403158]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="Panel108" type="Panel" parent="CanvasLayer/UI/Deck/Inventory/BGGridContainer" unique_id=1163540366]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/UI/Deck/Inventory" unique_id=176846618]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 0
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 12
+
+[node name="ItemSlot" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=95496511 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot2" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1842304956 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot3" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=741120854 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot4" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1641201745 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot5" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=794471998 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot6" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1065631202 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot7" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1933916636 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot8" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1141667676 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot9" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1001481840 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot10" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=444294946 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot11" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1299886184 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot12" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=281697801 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot13" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=679505320 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot14" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1017918522 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot15" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=32262984 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot16" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1354293300 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot17" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1074175596 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot18" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=734412294 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot19" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1172583513 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot20" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1437124126 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot21" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1117923856 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot22" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=115728162 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot23" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=2048690164 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot24" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1238008545 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot25" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=830630338 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot26" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1688560169 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot27" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=161233885 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot28" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1304132898 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot29" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1745720140 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot30" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=574117270 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot31" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=278092215 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot32" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=436875003 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot33" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=187912292 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot34" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1707833900 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot35" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1720388609 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot36" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=9463995 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot37" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1307914320 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot38" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1436795030 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot39" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1155999354 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot40" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=839196844 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot41" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=708807614 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot42" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=200276160 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot43" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1368961453 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot44" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1342283575 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot45" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=2047241470 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot46" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=2076568755 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot47" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=791829611 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot48" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=636039592 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot49" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=415759673 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot50" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=505867328 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot51" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=405079775 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot52" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=670158229 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot53" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=2049641932 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot54" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=984580411 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot55" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=362238995 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot56" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=650977407 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot57" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=2017746959 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot58" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=534310495 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot59" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1706710889 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot60" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=70853142 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot61" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=472764973 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot62" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1712192988 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot63" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=208896076 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot64" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=2067329539 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot65" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=795635742 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot66" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1297856982 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot67" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1139488336 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot68" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=642202479 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot69" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=530308664 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot70" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=2009491355 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot71" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=1671490952 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
+
+[node name="ItemSlot72" parent="CanvasLayer/UI/Deck/Inventory/GridContainer" unique_id=614714262 instance=ExtResource("9_jkv2x")]
+layout_mode = 2
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=404405370]
 stream = ExtResource("7_o6xl0")
@@ -320,11 +1093,17 @@ stream = ExtResource("9_choun")
 [node name="BoatCreaking" type="AudioStreamPlayer" parent="." unique_id=1182430054]
 stream = ExtResource("10_choun")
 
-[connection signal="button_down" from="UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/MarginContainer/StartGameButton" to="UI/mainMenu" method="_on_start_game_button_button_down"]
-[connection signal="button_up" from="UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/MarginContainer2/QuitGameButton" to="UI/mainMenu/PopupMessage" method="_on_quit_game_button_button_up"]
-[connection signal="button_up" from="UI/mainMenu/PopupMessage/NinePatchRect/VBoxContainer/MarginContainer2/ReturnGameButton" to="UI/mainMenu/PopupMessage" method="_on_return_game_button_button_up"]
-[connection signal="button_up" from="UI/mainMenu/PopupMessage/NinePatchRect/VBoxContainer/MarginContainer3/QuitGameButton" to="." method="_on_quit_game_button_button_up"]
-[connection signal="button_up" from="UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer/MarginContainer/Button" to="UI/PauseMenu" method="_on_button_button_up"]
-[connection signal="button_up" from="UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer/MarginContainer2/QuitfromPauseGameButton" to="UI/PauseMenu/PopupMessage" method="_on_quitfrom_pause_game_button_button_up"]
-[connection signal="button_up" from="UI/PauseMenu/PopupMessage/NinePatchRect/VBoxContainer/MarginContainer2/ReturnGameButton" to="UI/PauseMenu/PopupMessage" method="_on_return_game_button_button_up"]
-[connection signal="button_up" from="UI/PauseMenu/PopupMessage/NinePatchRect/VBoxContainer/MarginContainer3/QuitGameButton2" to="." method="_on_quit_game_button_2_button_up"]
+[node name="Game" parent="." unique_id=192646751 instance=ExtResource("3_sugp2")]
+visible = false
+z_index = 4
+
+[connection signal="pressed" from="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/MarginContainer/StartGameButton" to="CanvasLayer/UI/mainMenu" method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/MarginContainer3/InstructionButton" to="CanvasLayer/UI/mainMenu/InstructionMessage" method="_on_instruction_button_pressed"]
+[connection signal="button_up" from="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/MarginContainer2/QuitGameButton" to="CanvasLayer/UI/mainMenu/PopupMessage" method="_on_quit_game_button_button_up"]
+[connection signal="button_up" from="CanvasLayer/UI/mainMenu/PopupMessage/NinePatchRect/VBoxContainer/MarginContainer2/ReturnGameButton" to="CanvasLayer/UI/mainMenu/PopupMessage" method="_on_return_game_button_button_up"]
+[connection signal="button_up" from="CanvasLayer/UI/mainMenu/PopupMessage/NinePatchRect/VBoxContainer/MarginContainer3/QuitGameButton" to="." method="_on_quit_game_button_button_up"]
+[connection signal="pressed" from="CanvasLayer/UI/mainMenu/InstructionMessage/NinePatchRect/VBoxContainer/MarginContainer2/ReturnButton" to="CanvasLayer/UI/mainMenu/InstructionMessage" method="_on_return_button_pressed"]
+[connection signal="button_up" from="CanvasLayer/UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer/MarginContainer/Button" to="CanvasLayer/UI/PauseMenu" method="_on_button_button_up"]
+[connection signal="button_up" from="CanvasLayer/UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer/MarginContainer2/QuitfromPauseGameButton" to="CanvasLayer/UI/PauseMenu/PopupMessage" method="_on_quitfrom_pause_game_button_button_up"]
+[connection signal="button_up" from="CanvasLayer/UI/PauseMenu/PopupMessage/NinePatchRect/VBoxContainer/MarginContainer2/ReturnGameButton" to="CanvasLayer/UI/PauseMenu/PopupMessage" method="_on_return_game_button_button_up"]
+[connection signal="button_up" from="CanvasLayer/UI/PauseMenu/PopupMessage/NinePatchRect/VBoxContainer/MarginContainer3/QuitGameButton2" to="." method="_on_quit_game_button_2_button_up"]

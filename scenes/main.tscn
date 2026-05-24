@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://bq6rp6yn01lh8" path="res://scenes/item_slot.tscn" id="9_jkv2x"]
 [ext_resource type="AudioStream" uid="uid://cwkay5uopu7cx" path="res://resources/Smuggler's life Boat creaking.wav" id="10_choun"]
 [ext_resource type="Script" uid="uid://bwj5kxj3bge7l" path="res://scripts/sprite_bg.gd" id="10_jkv2x"]
+[ext_resource type="Script" uid="uid://upx30t3gstmt" path="res://scripts/instruction_message.gd" id="12_jscy8"]
 [ext_resource type="Script" uid="uid://cdyixsho7xj77" path="res://scenes/popup_messageMM.gd" id="12_yc10j"]
 [ext_resource type="Script" uid="uid://s6yxg8dajx0j" path="res://scenes/popup_message.gd" id="14_jscy8"]
 [ext_resource type="Script" uid="uid://cbktlyt3687kt" path="res://scripts/deck.gd" id="15_jscy8"]
@@ -119,10 +120,6 @@ custom_minimum_size = Vector2(360, 274)
 layout_mode = 2
 texture = ExtResource("8_0ld40")
 
-[node name="Seperator2" type="Control" parent="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer" unique_id=681374305]
-custom_minimum_size = Vector2(0, 40)
-layout_mode = 2
-
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer" unique_id=1272567474]
 layout_mode = 2
 size_flags_horizontal = 4
@@ -135,6 +132,20 @@ theme_override_colors/font_color = Color(0.5076884, 0.96891636, 0.91418785, 1)
 theme_override_fonts/font = ExtResource("9_gqmmt")
 theme_override_font_sizes/font_size = 32
 text = "Start Game"
+icon = ExtResource("5_trceg")
+flat = true
+icon_alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer" unique_id=285014219]
+layout_mode = 2
+
+[node name="InstructionButton" type="Button" parent="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/MarginContainer3" unique_id=1173145386]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5076884, 0.96891636, 0.91418785, 1)
+theme_override_fonts/font = ExtResource("9_gqmmt")
+theme_override_font_sizes/font_size = 32
+text = "Instruction "
 icon = ExtResource("5_trceg")
 flat = true
 icon_alignment = 1
@@ -212,6 +223,64 @@ theme_override_colors/font_color = Color(0.5076884, 0.96891636, 0.91418785, 1)
 theme_override_fonts/font = ExtResource("9_gqmmt")
 theme_override_font_sizes/font_size = 32
 text = "Quit Game"
+icon = ExtResource("5_trceg")
+flat = true
+icon_alignment = 1
+
+[node name="InstructionMessage" type="MarginContainer" parent="CanvasLayer/UI/mainMenu" unique_id=1695640262]
+custom_minimum_size = Vector2(400, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("12_jscy8")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/UI/mainMenu/InstructionMessage" unique_id=2131022337]
+layout_mode = 2
+texture = ExtResource("4_eb6dy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/mainMenu/InstructionMessage/NinePatchRect" unique_id=581728688]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SeperatorTopInstruct" type="MarginContainer" parent="CanvasLayer/UI/mainMenu/InstructionMessage/NinePatchRect/VBoxContainer" unique_id=783255432]
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/mainMenu/InstructionMessage/NinePatchRect/VBoxContainer" unique_id=1867840042]
+layout_mode = 2
+
+[node name="SeperatorLeftInstruct" type="MarginContainer" parent="CanvasLayer/UI/mainMenu/InstructionMessage/NinePatchRect/VBoxContainer/HBoxContainer" unique_id=1825154786]
+custom_minimum_size = Vector2(18, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/UI/mainMenu/InstructionMessage/NinePatchRect/VBoxContainer/HBoxContainer" unique_id=1848466979]
+custom_minimum_size = Vector2(364, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_gqmmt")
+theme_override_font_sizes/font_size = 28
+text = "Click and Drag the items out of your Inventory on the left and place them in your ship in a way that hides the illegal merchandise, in time for your arrivial at the harbour.
+The inspector will check you don't have any illegal cargo, don't let him find it.
+
+Mouse Wheel to Zoom
+Right Click to Pan"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="MoreSeperator" type="MarginContainer" parent="CanvasLayer/UI/mainMenu/InstructionMessage/NinePatchRect/VBoxContainer" unique_id=1451015882]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/UI/mainMenu/InstructionMessage/NinePatchRect/VBoxContainer" unique_id=1451908951]
+layout_mode = 2
+
+[node name="ReturnButton" type="Button" parent="CanvasLayer/UI/mainMenu/InstructionMessage/NinePatchRect/VBoxContainer/MarginContainer2" unique_id=217412664]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5076884, 0.96891636, 0.91418785, 1)
+theme_override_fonts/font = ExtResource("9_gqmmt")
+theme_override_font_sizes/font_size = 32
+text = "Return"
 icon = ExtResource("5_trceg")
 flat = true
 icon_alignment = 1
@@ -1057,9 +1126,11 @@ z_index = 4
 
 [connection signal="button_down" from="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/MarginContainer/StartGameButton" to="CanvasLayer/UI/mainMenu" method="_on_start_game_button_button_down"]
 [connection signal="pressed" from="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/MarginContainer/StartGameButton" to="CanvasLayer/UI/mainMenu" method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/MarginContainer3/InstructionButton" to="CanvasLayer/UI/mainMenu/InstructionMessage" method="_on_instruction_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/MarginContainer2/QuitGameButton" to="CanvasLayer/UI/mainMenu/PopupMessage" method="_on_quit_game_button_pressed"]
 [connection signal="button_up" from="CanvasLayer/UI/mainMenu/PopupMessage/NinePatchRect/VBoxContainer/MarginContainer2/ReturnGameButton" to="CanvasLayer/UI/mainMenu/PopupMessage" method="_on_return_game_button_button_up"]
 [connection signal="pressed" from="CanvasLayer/UI/mainMenu/PopupMessage/NinePatchRect/VBoxContainer/MarginContainer3/QuitGameButton" to="CanvasLayer/UI/PauseMenu/PopupMessage" method="_on_quit_game_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/mainMenu/InstructionMessage/NinePatchRect/VBoxContainer/MarginContainer2/ReturnButton" to="CanvasLayer/UI/mainMenu/InstructionMessage" method="_on_return_button_pressed"]
 [connection signal="button_up" from="CanvasLayer/UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer/MarginContainer/Button" to="CanvasLayer/UI/PauseMenu" method="_on_button_button_up"]
 [connection signal="button_up" from="CanvasLayer/UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer/MarginContainer2/QuitfromPauseGameButton" to="CanvasLayer/UI/PauseMenu/PopupMessage" method="_on_quitfrom_pause_game_button_button_up"]
 [connection signal="button_up" from="CanvasLayer/UI/PauseMenu/PopupMessage/NinePatchRect/VBoxContainer/MarginContainer2/ReturnGameButton" to="CanvasLayer/UI/PauseMenu/PopupMessage" method="_on_return_game_button_button_up"]

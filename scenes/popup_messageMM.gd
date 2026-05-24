@@ -17,3 +17,7 @@ func _on_return_game_button_button_up() -> void:
 
 func _on_quit_game_button_pressed() -> void:
 	visible = true
+
+
+func _on_return_button_pressed() -> void:
+	visible = false
