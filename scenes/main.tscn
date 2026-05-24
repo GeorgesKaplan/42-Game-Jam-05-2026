@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://155xx7s6y6ta"]
+[gd_scene format=3 uid="uid://clop6we8u00fx"]
 
 [ext_resource type="Script" uid="uid://dv2pjqdemn0kf" path="res://scripts/main.gd" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://bdxbnxpcv8naf" path="res://scenes/ui.tscn" id="2_0wfyh"]
@@ -14,7 +14,6 @@
 [ext_resource type="AudioStream" uid="uid://wbjhwd300twg" path="res://resources/Smuggler's life harbor ambience.wav" id="9_choun"]
 [ext_resource type="PackedScene" uid="uid://bq6rp6yn01lh8" path="res://scenes/item_slot.tscn" id="9_jkv2x"]
 [ext_resource type="AudioStream" uid="uid://cwkay5uopu7cx" path="res://resources/Smuggler's life Boat creaking.wav" id="10_choun"]
-[ext_resource type="Script" uid="uid://bwj5kxj3bge7l" path="res://scripts/sprite_bg.gd" id="10_jkv2x"]
 
 [node name="Main" type="Node" unique_id=1391963116]
 script = ExtResource("1_o5qli")
@@ -125,32 +124,7 @@ text = "Continue"
 icon = ExtResource("5_trceg")
 icon_alignment = 1
 
-<<<<<<< HEAD
 [node name="Deck" type="ScrollContainer" parent="CanvasLayer/UI" unique_id=1193058334]
-=======
-<<<<<<< HEAD
-[node name="Deck" parent="CanvasLayer/UI" unique_id=546211940 instance=ExtResource("9_jkv2x")]
-=======
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=964821931]
-script = ExtResource("8_a8y0u")
-
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=11108270]
-visible = false
-position = Vector2(-3772, 0)
-texture = ExtResource("9_jkv2x")
-centered = false
-script = ExtResource("10_jkv2x")
-
-[node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer" unique_id=232331390]
-position = Vector2(1920, 0)
-texture = ExtResource("9_jkv2x")
-centered = false
-script = ExtResource("10_jkv2x")
-
-[node name="Game" parent="." unique_id=192646751 instance=ExtResource("3_sugp2")]
->>>>>>> Inky
->>>>>>> main
-visible = false
 layout_mode = 1
 offset_right = 806.0
 offset_bottom = 815.0
