@@ -2,6 +2,7 @@ extends MarginContainer
 
 @onready var game: Node2D = null
 @onready var deck: ScrollContainer = $"../Deck"
+@onready var progress_bar: ProgressBar = $"../ProgressBar"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,3 +27,4 @@ func _on_start_game_button_pressed() -> void:
 	visible = false
 	game.visible = true
 	deck.visible = true
+	progress_bar.visible = true
