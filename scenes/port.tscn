@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://0jndayifv21i"]
+
+[ext_resource type="Script" uid="uid://cbktlyt3687kt" path="res://scripts/port.gd" id="1_4bvp8"]
+
+[node name="Port" type="ScrollContainer" unique_id=546211940]
+custom_minimum_size = Vector2(416, 0)
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 40.0
+grow_vertical = 2
+size_flags_horizontal = 0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+script = ExtResource("1_4bvp8")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=628859043]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="BGGridContainer" type="GridContainer" parent="MarginContainer" unique_id=742869227]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 7
+metadata/_edit_group_ = true
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer" unique_id=2045465780]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 7

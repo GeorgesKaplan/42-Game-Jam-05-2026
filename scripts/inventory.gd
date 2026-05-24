@@ -15,8 +15,8 @@ var item_slot_instance: ItemSlot
 func init_inventory(room_len: int, room_height: int) -> void:
 	grid_container.columns = room_len
 	bg_grid_container.columns = room_len
-	for i: int in range(1, room_len):
-		for j: int in range(1, room_height):
+	for i: int in range(0, room_len):
+		for j: int in range(0, room_height):
 			item_slot_instance = ITEM_SLOT.instantiate()
 			grid_container.add_child(item_slot_instance)
 			
