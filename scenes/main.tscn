@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://cituoxhx80mqf" path="res://scenes/main_menu.gd" id="3_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://ckn72dfdxu671" path="res://scenes/game.tscn" id="3_sugp2"]
 [ext_resource type="Texture2D" uid="uid://0l4nlwcre06g" path="res://resources/Illustration_sans_titre.png" id="4_eb6dy"]
-[ext_resource type="Script" uid="uid://c8tlgrf87xjsf" path="res://scenes/start_game_button.gd" id="4_tbgi4"]
 [ext_resource type="Script" uid="uid://b4ini8n3mkuen" path="res://scenes/pause_menu.gd" id="5_tefeu"]
 [ext_resource type="Texture2D" uid="uid://cdyj8nsvje345" path="res://resources/Illustration_sans_titre_1.png" id="5_trceg"]
 [ext_resource type="Script" uid="uid://sj1avxwneg6d" path="res://scripts/progress_bar.gd" id="5_yc10j"]
@@ -20,7 +19,22 @@
 [ext_resource type="Script" uid="uid://bwj5kxj3bge7l" path="res://scripts/sprite_bg.gd" id="10_jkv2x"]
 [ext_resource type="Script" uid="uid://cdyixsho7xj77" path="res://scenes/popup_messageMM.gd" id="12_yc10j"]
 [ext_resource type="Script" uid="uid://s6yxg8dajx0j" path="res://scenes/popup_message.gd" id="14_jscy8"]
+[ext_resource type="Script" uid="uid://cbktlyt3687kt" path="res://scripts/deck.gd" id="15_jscy8"]
 [ext_resource type="Texture2D" uid="uid://cwceugc1p1ag6" path="res://resources/sprites/background.jpg" id="15_muem4"]
+
+[sub_resource type="GDScript" id="GDScript_yc10j"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [node name="Main" type="Node" unique_id=1391963116]
 script = ExtResource("1_o5qli")
@@ -124,7 +138,6 @@ text = "Start Game"
 icon = ExtResource("5_trceg")
 flat = true
 icon_alignment = 1
-script = ExtResource("4_tbgi4")
 
 [node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer" unique_id=1298230279]
 layout_mode = 2
@@ -139,7 +152,6 @@ text = "Quit Game"
 icon = ExtResource("5_trceg")
 flat = true
 icon_alignment = 1
-script = ExtResource("4_tbgi4")
 
 [node name="PopupMessage" type="MarginContainer" parent="CanvasLayer/UI/mainMenu" unique_id=1423895230]
 layout_mode = 2
@@ -189,7 +201,6 @@ text = "Return"
 icon = ExtResource("5_trceg")
 flat = true
 icon_alignment = 1
-script = ExtResource("4_tbgi4")
 
 [node name="MarginContainer3" type="MarginContainer" parent="CanvasLayer/UI/mainMenu/PopupMessage/NinePatchRect/VBoxContainer" unique_id=1845360083]
 layout_mode = 2
@@ -204,7 +215,6 @@ text = "Quit Game"
 icon = ExtResource("5_trceg")
 flat = true
 icon_alignment = 1
-script = ExtResource("4_tbgi4")
 
 [node name="PauseMenu" type="MarginContainer" parent="CanvasLayer/UI" unique_id=1076864500]
 layout_mode = 1
@@ -279,7 +289,7 @@ text = "Quit Game"
 icon = ExtResource("5_trceg")
 flat = true
 icon_alignment = 1
-script = ExtResource("4_tbgi4")
+script = SubResource("GDScript_yc10j")
 
 [node name="PopupMessage" type="MarginContainer" parent="CanvasLayer/UI/PauseMenu" unique_id=1054254734]
 layout_mode = 2
@@ -329,7 +339,7 @@ text = "Return"
 icon = ExtResource("5_trceg")
 flat = true
 icon_alignment = 1
-script = ExtResource("4_tbgi4")
+script = SubResource("GDScript_yc10j")
 
 [node name="MarginContainer3" type="MarginContainer" parent="CanvasLayer/UI/PauseMenu/PopupMessage/NinePatchRect/VBoxContainer" unique_id=322775282]
 layout_mode = 2
@@ -344,13 +354,14 @@ text = "Quit Game"
 icon = ExtResource("5_trceg")
 flat = true
 icon_alignment = 1
-script = ExtResource("4_tbgi4")
+script = SubResource("GDScript_yc10j")
 
 [node name="Deck" type="ScrollContainer" parent="CanvasLayer/UI" unique_id=1193058334]
 visible = false
 layout_mode = 1
 offset_right = 806.0
 offset_bottom = 815.0
+script = ExtResource("15_jscy8")
 
 [node name="Inventory" type="MarginContainer" parent="CanvasLayer/UI/Deck" unique_id=1690868856]
 layout_mode = 2
@@ -1045,8 +1056,10 @@ visible = false
 z_index = 4
 
 [connection signal="button_down" from="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/MarginContainer/StartGameButton" to="CanvasLayer/UI/mainMenu" method="_on_start_game_button_button_down"]
-[connection signal="button_up" from="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/MarginContainer2/QuitGameButton" to="CanvasLayer/UI/mainMenu/PopupMessage" method="_on_quit_game_button_button_up"]
+[connection signal="pressed" from="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/MarginContainer/StartGameButton" to="CanvasLayer/UI/mainMenu" method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/mainMenu/MenuBoard/NinePatchRect/VBoxContainer/MarginContainer2/QuitGameButton" to="CanvasLayer/UI/mainMenu/PopupMessage" method="_on_quit_game_button_pressed"]
 [connection signal="button_up" from="CanvasLayer/UI/mainMenu/PopupMessage/NinePatchRect/VBoxContainer/MarginContainer2/ReturnGameButton" to="CanvasLayer/UI/mainMenu/PopupMessage" method="_on_return_game_button_button_up"]
+[connection signal="pressed" from="CanvasLayer/UI/mainMenu/PopupMessage/NinePatchRect/VBoxContainer/MarginContainer3/QuitGameButton" to="CanvasLayer/UI/PauseMenu/PopupMessage" method="_on_quit_game_button_pressed"]
 [connection signal="button_up" from="CanvasLayer/UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer/MarginContainer/Button" to="CanvasLayer/UI/PauseMenu" method="_on_button_button_up"]
 [connection signal="button_up" from="CanvasLayer/UI/PauseMenu/PauseMenuBoard/NinePatchRect/VBoxContainer/MarginContainer2/QuitfromPauseGameButton" to="CanvasLayer/UI/PauseMenu/PopupMessage" method="_on_quitfrom_pause_game_button_button_up"]
 [connection signal="button_up" from="CanvasLayer/UI/PauseMenu/PopupMessage/NinePatchRect/VBoxContainer/MarginContainer2/ReturnGameButton" to="CanvasLayer/UI/PauseMenu/PopupMessage" method="_on_return_game_button_button_up"]

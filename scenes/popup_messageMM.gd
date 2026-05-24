@@ -7,6 +7,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+@warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
 	pass
 
@@ -14,6 +15,5 @@ func _process(delta: float) -> void:
 func _on_return_game_button_button_up() -> void:
 	visible = false
 
-
-func _on_quit_game_button_button_up() -> void:
+func _on_quit_game_button_pressed() -> void:
 	visible = true
