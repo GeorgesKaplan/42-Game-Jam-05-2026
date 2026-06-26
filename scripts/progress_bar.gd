@@ -24,7 +24,6 @@ func _unpause() -> void:
 func _process(delta: float) -> void:
 	if is_running:
 		value += delta
-		print(value)
 	if value == 100:
 		is_running = false
 		FSM.set_state(FSM.State.INSPECT)

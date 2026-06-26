@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://rxw7o4fkyqvc"]
 
 [ext_resource type="Script" uid="uid://d12ojcv564vkm" path="res://scripts/inventory.gd" id="1_53g1v"]
+[ext_resource type="PackedScene" uid="uid://bq6rp6yn01lh8" path="res://scenes/item_slot.tscn" id="2_hj2ta"]
 
 [node name="Inventory" type="MarginContainer" unique_id=2063165415]
 anchors_preset = 15
@@ -28,3 +29,6 @@ size_flags_horizontal = 3
 theme_override_constants/h_separation = 5
 theme_override_constants/v_separation = 5
 columns = 7
+
+[node name="ItemSlot" parent="GridContainer" unique_id=95496511 instance=ExtResource("2_hj2ta")]
+layout_mode = 2

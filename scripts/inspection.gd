@@ -6,6 +6,7 @@ var Rhgt: int
 
 #returns a positive interger if an illegal item is found via the x & y starting point
 func floodfill(x: int, y: int) -> int:
+	print("{x = %s} {y = %s} {Rlen = %s} {Rhgt = %s} {room.size = %s}" %[x, y, Rlen, Rhgt, room.size()])
 	var slot: ItemSlot = room[y * Rlen + x]
 	#sets current case as checked to avoid checking it again
 	slot.is_checked = true
@@ -17,11 +18,11 @@ func floodfill(x: int, y: int) -> int:
 
 	var fail: int = 0
 
-	if y > 0 and not room[(y - 1) * Rlen + x].is_checked:		#check up
+	if y >= 0 and not room[(y - 1) * Rlen + x].is_checked:		#check up
 		fail += floodfill(x, y - 1)
 	if y < Rhgt - 1 and not room[(y + 1) * Rlen + x].is_checked:	#check down
 		fail += floodfill(x, y + 1)
-	if x > 0 and not room[y * Rlen + (x - 1)].is_checked:			#check left
+	if x >= 0 and not room[y * Rlen + (x - 1)].is_checked:			#check left
 		fail += floodfill(x - 1, y)
 	if x < Rlen - 1 and not room[y * Rlen + (x + 1)].is_checked:	#check right
 		fail += floodfill(x + 1, y)

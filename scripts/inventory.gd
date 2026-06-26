@@ -40,6 +40,4 @@ func _notification(what: int) -> void:
 				#print_debug("Dragging failed")
 				drag_data.item_icon.show()
 				drag_data.update_ui()
-		if Inspection.inspection(Vector2(0,1), grid_container):
-			print("FOUND CONTRABAND")
 		drag_data = null
